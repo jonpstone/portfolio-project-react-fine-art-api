@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../stylesheets/paintings.css';
 
 class Paintings extends Component {
   constructor(props) {
@@ -13,17 +14,15 @@ class Paintings extends Component {
 
     return (
       <div>
-        <span>{name}</span>
-        { ' | ' }
-        <img src={image}/>
-        { ' | ' }
-        <span>{about}</span>
-        { ' | ' }
-        <span>{year}</span>
-        { ' | ' }
-        <span>{artist}</span>
-        { ' | ' }
-        <span>{period}</span>
+        <ul>
+          <li>Name: {name}</li>
+          <li><img src={image} alt={'No Image...'}/></li>
+          <li>About: {about}</li>
+          <li>Year: {year}</li>
+          <li>Artist: {artist}</li>
+          <li>Period: {period}</li>
+          <br />
+        </ul>
       </div>
     );
   }

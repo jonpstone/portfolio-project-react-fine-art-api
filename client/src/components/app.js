@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../app.css';
+import '../stylesheets/app.css';
 import Paintings from '../components/paintings'
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Oscar's Fine Art</h1>
+        <h1>Oscar's House of Fine Art</h1>
         {
           this.state.paintings.map(paintings => {
             return (
