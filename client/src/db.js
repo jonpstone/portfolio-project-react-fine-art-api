@@ -48,3 +48,5 @@ const data = [
     period: 'Baroque'
   }
 ]
+
+export default data;
