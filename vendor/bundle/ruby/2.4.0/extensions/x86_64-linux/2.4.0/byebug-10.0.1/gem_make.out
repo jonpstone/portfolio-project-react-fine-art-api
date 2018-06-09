@@ -1,0 +1,19 @@
+current directory: /home/jonathan/code/projects/portfolio-project-react-fine-art-api/vendor/bundle/ruby/2.4.0/gems/byebug-10.0.1/ext/byebug
+/usr/share/rvm/rubies/ruby-2.4.3/bin/ruby -r ./siteconf20180504-30319-i95bzh.rb extconf.rb
+creating Makefile
+
+current directory: /home/jonathan/code/projects/portfolio-project-react-fine-art-api/vendor/bundle/ruby/2.4.0/gems/byebug-10.0.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/jonathan/code/projects/portfolio-project-react-fine-art-api/vendor/bundle/ruby/2.4.0/gems/byebug-10.0.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/jonathan/code/projects/portfolio-project-react-fine-art-api/vendor/bundle/ruby/2.4.0/gems/byebug-10.0.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -m 0755 byebug.so ./.gem.20180504-30319-1uswo8u/byebug

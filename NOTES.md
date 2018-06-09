@@ -2,7 +2,7 @@ An API to provide data to a React client.
 
 INTERACTION
 Up vote or down vote PAINTINGS (state).
-Leave comments on PAINTINGS (server).
+Leave comments on PAINTINGS (api).
 
 VIEWING
 Scroll through PAINTINGS by PERIOD.

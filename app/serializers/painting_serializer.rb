@@ -1,5 +1,5 @@
 class PaintingSerializer < ActiveModel::Serializer
-  attributes :id, :name, :year
+  attributes :id, :painting_name, :year
   has_one :artist
   has_one :period
 end
