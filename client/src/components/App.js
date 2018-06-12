@@ -3,11 +3,12 @@ import { Provider } from 'react-redux';
 import '../App.css';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route } from 'react-router-dom';
+import promise from 'redux-promise';
 
 import reducers from '../reducers';
 import PaintingsIndex from '../components/paintings_index';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 class App extends Component {
   render() {

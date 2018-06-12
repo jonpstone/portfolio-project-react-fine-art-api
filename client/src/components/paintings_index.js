@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchPaintings } from '../actions';
 
 class PaintingsIndex extends Component {
+  componentDidMount() {
+    this.props.fetchPaintings();
+  }
   render() {
     return (
       <div>
@@ -10,4 +15,5 @@ class PaintingsIndex extends Component {
   }
 }
 
-export default PaintingsIndex;
+export default connect(null, { fetchPaintings })(PaintingsIndex);
+ 
