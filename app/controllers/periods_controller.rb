@@ -5,7 +5,7 @@ class PeriodsController < ApplicationController
   end
 
   def show
-    @period = Period.find(params[:painting_id])
+    @period = Period.find(params[:id])
     render json: @period
   end
 end
