@@ -1,5 +1,10 @@
 {
   "name": "portfolio-project-react-fine-art-api",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.5.2"
+  }
 }
