@@ -1,25 +1,21 @@
-An API to provide data to a React client.
+A React Client, which consumes a Rails API for an online fine art gallery.
 
-INTERACTION
-Up vote or down vote PAINTINGS (state).
-Leave comments on PAINTINGS (api).
+NavBar page header
 
-VIEWING
-Scroll through PAINTINGS by PERIOD.
-View by ARTIST.
+Navigation Component "Header.js"... (stateless)
 
-HOME PAGE
-Previews random art (only year and artist)
-Navbar (Has a home button and then list periods)
-Possibly art news from an API
+Will contain a 'Home', 'By Period', 'By Artist' and 'About' links.
 
-PAINTINGS PAGE
-Shows all art information
-Comments
-Upvote/Downvote
+Landing page '/'
 
-ARTISTS PAGE
-Lists paintings by that artist
+Home Component "LandingPage.js"... (stateless)
 
-PERIODS PAGE
-Lists all art in that period
+Contains a life cycle method, which randomly selects a painting to feature on the home page. When rendered, a link to the painting's individual component can be accessed.
+
+Period List page '/periods'
+
+Periods Component "PeriodList.js"... (stateless)
+
+Contains rows of different periods, which will feature background art from each period, clicking on these will link to a period page.
+
+Period Page

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Period from './Period';
-import * as actions from '../actions/periodActions.js';
 
 export class PeriodList extends Component {
   constructor() {
@@ -15,6 +13,7 @@ export class PeriodList extends Component {
     .then(results => {
       return results.json();
     }).then(data => {
+      console.log(data);
       let periods = data.map((item) => {
         return(
           <div>
@@ -22,15 +21,14 @@ export class PeriodList extends Component {
           </div>
         );
       })
+      this.setState({ periods });
     })
-    this.setState({ periods });
-    console.log("state", this.state.periods);
   }
 
   render() {
     return (
       <div>
-        I am the Period List Page.
+        {this.state.periods}
       </div>
     );
   }
