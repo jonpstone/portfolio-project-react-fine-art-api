@@ -7,6 +7,8 @@ export class Home extends Component {
       painting: []
     };
   }
+
+
   
   componentDidMount() {
     fetch(`api/paintings`)
@@ -19,13 +21,13 @@ export class Home extends Component {
         if (painting.id === paintingId) {
           return(
             <div>
-              <li key={painting.id}>{painting.painting_name}</li>
+              <img
+                src={`images/${painting.period.period_name}/${painting.image}`}
+              />
             </div>
           );
         }
       })
-      console.log("painting", painting);
-      console.log("paintingId", paintingId);
       this.setState({ painting });
     })
   }
