@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export class Home extends Component {
   constructor() {
@@ -8,12 +9,10 @@ export class Home extends Component {
     };
   }
 
-
-  
   componentDidMount() {
     fetch(`api/paintings`)
-    .then(results => {
-      return results.json();
+    .then(res => {
+      return res.json();
     }).then(data => {
       let paintingId = Math.floor(Math.random() * data.length);
       // let painting = data.filter(painting => paintingId === painting.id);
@@ -21,9 +20,12 @@ export class Home extends Component {
         if (painting.id === paintingId) {
           return(
             <div>
-              <img
-                src={`images/${painting.period.period_name}/${painting.image}`}
-              />
+              <NavLink to={`/paintings/${painting.id}`}>
+                <img
+                  src={`images/${painting.period.period_name}/${painting.image}`}
+                  alt="Random Artwork"
+                />
+              </NavLink>
             </div>
           );
         }

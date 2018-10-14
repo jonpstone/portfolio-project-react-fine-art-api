@@ -12,7 +12,7 @@ Will contain a 'Home', 'By Period', 'By Artist' and 'About' links.
 
 Landing page '/'
 
-Home Component "LandingPage.js"... (stateless)
+Home Component "Home.js"... (stateless)
 
 Contains a life cycle method, which randomly selects a painting to feature on the home page. When rendered, a link to the painting's individual component can be accessed.
 
