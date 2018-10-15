@@ -34,7 +34,7 @@ Contains rows of different periods, which will feature background art from each 
 
 --------------------------------------------------------------------------------
 
-Period Artist List Page '/periods/:id/paintings'
+Period Artist List Page '/periods/:id/artists'
 
 Period Artist List Component "PeriodArtistList.js"... (stateless)
 

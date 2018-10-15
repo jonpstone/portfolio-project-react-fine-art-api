@@ -11,16 +11,15 @@ export class Home extends Component {
 
   componentDidMount() {
     fetch(`api/paintings`)
-    .then(res => {
-      return res.json();
-    }).then(data => {
+    .then(res => res.json())
+    .then(data => {
       let paintingId = Math.floor(Math.random() * data.length);
       // let painting = data.filter(painting => paintingId === painting.id);
       let painting = data.map((painting) => {
         if (painting.id === paintingId) {
-          return(
+          return (
             <div>
-              <NavLink to={`/paintings/${painting.id}`}>
+              <NavLink to={`/painting/${painting.id}`}>
                 <img
                   src={`images/${painting.period.period_name}/${painting.image}`}
                   alt="Random Artwork"

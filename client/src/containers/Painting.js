@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class Painting extends Component {
+export class Painting extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,24 +10,30 @@ export class Painting extends Component {
   }
 
   componentDidMount() {
-    console.log("urlId", this.state.paintingFetchId);
-
-    fetch(`/api/paintings/${this.state.paintingFetchId}`)
-    .then(res => {
-      return res.json();
-    }).then(data => {
-      this.setState({ painting: data })
+    fetch(`api/paintings/${this.state.paintingFetchId}`)
+    .then(res => res.json())
+    .then(data => {
+      let painting = data.map((painting) => {
+        return (
+          <div>
+            <img 
+              src={`images/${painting.period_name}/${painting.image}`}
+              alt="Featured Artwork"
+            />
+          </div>
+        );
+      })
+      this.setState({ painting });
     })
   }
 
   render() {
     return (
       <div>
-        {console.log(this.state.painting)}
+        {this.state.painting}
       </div>
     );
   }
 }
 
 export default Painting;
-
