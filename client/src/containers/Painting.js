@@ -1,25 +1,24 @@
 import React from 'react';
 
 export class Painting extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
       paintingFetchId: props.match.params.id,
-      painting: []
+      painting: [],
     };
   }
 
   componentDidMount() {
-    fetch(`api/paintings/${this.state.paintingFetchId}`)
+    fetch(`/api/paintings/${this.state.paintingFetchId}`)
     .then(res => res.json())
     .then(data => {
-      let painting = data.map((painting) => {
+      let returnedPainting = [data];
+      let painting = returnedPainting.map((painting) => {
         return (
           <div>
-            <img 
-              src={`images/${painting.period_name}/${painting.image}`}
-              alt="Featured Artwork"
-            />
+            {painting.artist.artist_name}
           </div>
         );
       })
@@ -28,7 +27,7 @@ export class Painting extends React.Component {
   }
 
   render() {
-    return (
+    return(
       <div>
         {this.state.painting}
       </div>

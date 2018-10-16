@@ -10,12 +10,12 @@ export class Home extends Component {
   }
 
   componentDidMount() {
-    fetch(`api/paintings`)
+    let paintingId = Math.floor(Math.random() * 66);
+    fetch(`api/paintings/${paintingId}`)
     .then(res => res.json())
     .then(data => {
-      let paintingId = Math.floor(Math.random() * data.length);
-      // let painting = data.filter(painting => paintingId === painting.id);
-      let painting = data.map((painting) => {
+      let returnedPainting = [data];
+      let painting = returnedPainting.map((painting) => {
         if (painting.id === paintingId) {
           return (
             <div>
