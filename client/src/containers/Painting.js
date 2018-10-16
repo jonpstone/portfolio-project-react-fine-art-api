@@ -18,7 +18,12 @@ export class Painting extends React.Component {
       let painting = returnedPainting.map((painting) => {
         return (
           <div>
-            {painting.artist.artist_name}
+            <img
+              src={`/images/${painting.period.period_name}/${painting.image}`}
+              alt="Selected Artwork"
+            />
+            <h3>{painting.painting_name} By {painting.artist.artist_name}</h3>
+            <p>{painting.about}</p>
           </div>
         );
       })
