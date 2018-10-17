@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export class PeriodList extends Component {
   constructor() {
     super();
     this.state = {
-      periods: []
+      periods: [],
     };
+  }
+
+  randomUriGenerator() {
+    
   }
   
   componentDidMount() {
@@ -14,10 +19,12 @@ export class PeriodList extends Component {
       return results.json();
     }).then(data => {
       console.log(data);
-      let periods = data.map((item) => {
+      let periods = data.map((period) => {
         return(
           <div>
-            <li key={item.id}>{item.period_name}</li>
+            <NavLink to={`/periods/${period.id}/artists`}>
+              <li key={period.id}>{period.period_name}</li>
+            </NavLink>
           </div>
         );
       })
@@ -26,11 +33,17 @@ export class PeriodList extends Component {
   }
 
   render() {
-    return (
-      <div>
-        {this.state.periods}
-      </div>
-    );
+    const { periods } = this.state;
+
+    if (!periods) {
+      return <div>Loading artistic periods...</div>
+    } else {
+      return(
+        <div>
+          {this.state.periods}
+        </div>
+      );
+    }
   }
 }
 
