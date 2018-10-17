@@ -32,11 +32,17 @@ export class Painting extends React.Component {
   }
 
   render() {
-    return(
-      <div>
-        {this.state.painting}
-      </div>
-    );
+    const { painting } = this.state;
+
+    if (!painting) {
+      return <div>Loading serene beauty...</div>
+    } else {
+      return(
+        <div>
+          {this.state.painting}
+        </div>
+      );
+    }
   }
 }
 
