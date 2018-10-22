@@ -14,18 +14,29 @@ export class Home extends Component {
     fetch(`api/paintings/${paintingId}`)
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      
+      const styles = {height: "100%", maxWidth: "100%"};
       const returnedPainting = [data];
       const painting = returnedPainting.map((painting) => {
         if (painting.id === paintingId) {
+
           return (
             <div>
               <NavLink to={`/painting/${painting.id}`}>
                 <img
-                  src={`images/${painting.period.period_name}/${painting.image}`}
+                  src={`images/${painting.period.period_name}/${
+                    painting.image
+                  }`}
                   alt="Random Artwork"
+                  style={styles}
                 />
               </NavLink>
+              {/* api test area */}
+              {/* <img
+              src="images/realism/Portrait_of_Laszlo_Paal_1877.jpg"
+              alt="NOT FOUND!!!!!!!!!!!!!!"
+            />
+            <p>Portrait_of_Laszlo_Paal_1877</p> */}
             </div>
           );
         }

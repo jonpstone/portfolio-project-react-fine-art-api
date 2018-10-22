@@ -14,9 +14,10 @@ export class PeriodList extends Component {
     .then(res => res.json())
     .then(data => {
 
+      const styles = {maxHeight: "1000px", maxWidth: "1000px"};
       const periods = data
         .map((period) => {
-          
+
         return(
           <div>
             <NavLink to={`/periods/${period.id}/artists`}>
@@ -27,6 +28,7 @@ export class PeriodList extends Component {
                   ].image
                 }`} 
                 alt="Random Period Piece"
+                style={styles}
               />
               <li key={period.id}>{period.period_name}</li>
             </NavLink>

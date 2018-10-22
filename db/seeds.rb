@@ -6,6 +6,7 @@ Period.create!([
   {period_name: 'renaissance'},
   {period_name: 'romanticism'}
 ])
+Portrait_of_László_Paál_1877
 
 Artist.create!([
   {artist_name: 'Canaletto', profile: 'images/baroque/canaletto/canaletto.jpg'},
@@ -909,7 +910,7 @@ Painting.create!([
   },
   {
     painting_name: 'A Bar at the Folies-Bergère',
-    image: 'A_Bar_at_the_Folies-Bergère_1882.jpg',
+    image: 'A_Bar_at_the_Folies_Bergère_1882.jpg',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1882',
     artist_id: '26',
@@ -1149,7 +1150,7 @@ Painting.create!([
   },
   {
     painting_name: 'Portrait of László Paál',
-    image: 'Portrait_of_László_Paál_1877.jpg',
+    image: 'Portrait_of_Laszlo_Paal_1877.jpg',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1877',
     artist_id: '28',
@@ -1249,7 +1250,7 @@ Painting.create!([
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1485',
     artist_id: '30',
-    period_id: '4'
+    period_id: '5'
   },
   {
     painting_name: 'Calumny of Apelles',
@@ -1517,7 +1518,7 @@ Painting.create!([
   },
   {
     painting_name: 'Pope Paul III with his Grandsons Alessandro and Ottavio Farnese',
-    image: 'Pope_Paul_III_with_his_Grandsons_Alessandro_and_Ottavio_Farnese_1546.jpg',
+    image: 'Pope_Paul_III_with_his_Grandsons_Alessandro_and_Ottavio_Farnese_1546.jpeg',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1546',
     artist_id: '33',

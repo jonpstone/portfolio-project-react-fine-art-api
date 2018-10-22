@@ -15,14 +15,16 @@ export class Painting extends React.Component {
     .then(res => res.json())
     .then(data => {
 
+      const styles = {maxHeight: "1000px", maxWidth: "1000px"};
       const returnedPainting = [data];
       const painting = returnedPainting.map((painting) => {
-        
+
         return (
           <div>
             <img
               src={`/images/${painting.period.period_name}/${painting.image}`}
               alt="Selected Artwork"
+              style={styles}
             />
             <h3>{painting.painting_name} By {painting.artist.artist_name}</h3>
             <p>{painting.about}</p>
