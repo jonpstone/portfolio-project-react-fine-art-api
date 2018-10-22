@@ -14,8 +14,10 @@ export class Painting extends React.Component {
     fetch(`/api/paintings/${this.state.paintingFetchId}`)
     .then(res => res.json())
     .then(data => {
-      let returnedPainting = [data];
-      let painting = returnedPainting.map((painting) => {
+
+      const returnedPainting = [data];
+      const painting = returnedPainting.map((painting) => {
+        
         return (
           <div>
             <img

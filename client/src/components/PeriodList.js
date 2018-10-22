@@ -8,34 +8,26 @@ export class PeriodList extends Component {
       periods: [],
     };
   }
-
-  randomUriGenerator(periods) {
-    let uri = Math.floor(Math.random() * periods.paintings.length);
-    periods.forEach(period => {
-      let paintingImage = period.map((attr) => {
-        if (attr.painting.id === uri) {
-          return attr.painting.image;
-        }
-      })
-      return paintingImage;
-    });
-  }
   
   componentDidMount() {
     fetch(`api/periods`)
     .then(res => res.json())
     .then(data => {
-      console.log("returnedPeriods", data);
-      let periods = data
+
+      const periods = data
         .map((period) => {
-        console.log("functionData", this.randomUriGenerator(periods));
+          
         return(
           <div>
             <NavLink to={`/periods/${period.id}/artists`}>
-              {/* <img 
-                src={`images/${period.period_name}/${period.paintings}`} 
+              <img 
+                src={`images/${period.period_name}/${
+                  period.paintings[
+                    Math.floor(Math.random() * period.paintings.length)
+                  ].image
+                }`} 
                 alt="Random Period Piece"
-              /> */}
+              />
               <li key={period.id}>{period.period_name}</li>
             </NavLink>
           </div>
