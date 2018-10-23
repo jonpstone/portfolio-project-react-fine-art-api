@@ -13,11 +13,11 @@ export class PeriodList extends Component {
     fetch(`api/periods`)
     .then(res => res.json())
     .then(data => {
-
-      const styles = {maxHeight: "1000px", maxWidth: "1000px"};
+      
+      const styles = {maxHeight: "900px", maxWidth: "900px"};
       const periods = data
         .map((period) => {
-
+          
         return(
           <div>
             <NavLink to={`/periods/${period.id}/artists`}>

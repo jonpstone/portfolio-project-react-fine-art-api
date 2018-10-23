@@ -15,7 +15,7 @@ export class Home extends Component {
     .then(res => res.json())
     .then(data => {
       
-      const styles = {height: "100%", maxWidth: "100%"};
+      const styles = {maxHeight: "100%", maxWidth: "100%"};
       const returnedPainting = [data];
       const painting = returnedPainting.map((painting) => {
         if (painting.id === paintingId) {
@@ -33,10 +33,11 @@ export class Home extends Component {
               </NavLink>
               {/* api test area */}
               {/* <img
-              src="images/realism/Portrait_of_Laszlo_Paal_1877.jpg"
+              src="images/renaissance/benois_madonna_1478.jpeg"
               alt="NOT FOUND!!!!!!!!!!!!!!"
+              style={styles}
             />
-            <p>Portrait_of_Laszlo_Paal_1877</p> */}
+            <p>benois_madonna_1478</p> */}
             </div>
           );
         }

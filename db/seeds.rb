@@ -6,7 +6,6 @@ Period.create!([
   {period_name: 'renaissance'},
   {period_name: 'romanticism'}
 ])
-Portrait_of_László_Paál_1877
 
 Artist.create!([
   {artist_name: 'Canaletto', profile: 'images/baroque/canaletto/canaletto.jpg'},
@@ -966,7 +965,7 @@ Painting.create!([
   },
   {
     painting_name: 'The_Café_Concert_1873',
-    image: 'The_Café_Concert_1873.jpg',
+    image: 'The_Cafe_Concert_1873.jpg',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1873',
     artist_id: '26',
@@ -1334,7 +1333,7 @@ Painting.create!([
   },
   {
     painting_name: 'Benois Madonna',
-    image: 'benois_madonna_1478.jpg',
+    image: 'benois_madonna_1478.jpeg',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1478',
     artist_id: '31',
