@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export class PeriodList extends Component {
-  constructor() {
-    super();
-    this.state = {
-      periods: [],
-    };
-  }
+export default class PeriodList extends React.Component {
+  state = {
+    periods: [],
+  };
   
   componentDidMount() {
     fetch(`api/periods`)
@@ -15,8 +12,7 @@ export class PeriodList extends Component {
     .then(data => {
       
       const styles = {maxHeight: "900px", maxWidth: "900px"};
-      const periods = data
-        .map((period) => {
+      const periods = data.map((period) => {
           
         return(
           <div>
@@ -53,5 +49,3 @@ export class PeriodList extends Component {
     }
   }
 }
-
-export default PeriodList;

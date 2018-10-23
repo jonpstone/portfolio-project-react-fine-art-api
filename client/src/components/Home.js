@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
-      painting: []
-    };
-  }
+export default class Home extends React.Component {
+  state = {
+    painting: []
+  };
 
   componentDidMount() {
     const paintingId = Math.floor(Math.random() * 274);
@@ -33,11 +30,11 @@ export class Home extends Component {
               </NavLink>
               {/* api test area */}
               {/* <img
-              src="images/renaissance/benois_madonna_1478.jpeg"
+              src="images/renaissance/Virgin_and_Child_with_Canon_van_der_Paele_1436.jpg"
               alt="NOT FOUND!!!!!!!!!!!!!!"
               style={styles}
             />
-            <p>benois_madonna_1478</p> */}
+            <p>Virgin_and_Child_with_Canon_van_der_Paele_1436</p> */}
             </div>
           );
         }
@@ -60,5 +57,3 @@ export class Home extends Component {
     }
   }
 }
-
-export default Home;

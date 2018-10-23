@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class PeriodList extends Component {
+export default class PeriodList extends React.Component {
   // constructor() {
   //   super();
   //   this.state = {
@@ -32,5 +32,3 @@ export class PeriodList extends Component {
     );
   }
 }
-
-export default PeriodList;

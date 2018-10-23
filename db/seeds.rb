@@ -6,7 +6,7 @@ Period.create!([
   {period_name: 'renaissance'},
   {period_name: 'romanticism'}
 ])
-
+Virgin_and_Child_with_Canon_van_der_Paele_1436
 Artist.create!([
   {artist_name: 'Canaletto', profile: 'images/baroque/canaletto/canaletto.jpg'},
   {artist_name: 'Carvaggio', profile: 'images/baroque/carvaggio/Carvaggio.jpg'},
@@ -1157,7 +1157,7 @@ Painting.create!([
   },
   {
     painting_name: 'Strike',
-    image: 'strike_1895.jpg',
+    image: 'strike_1895.JPG',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1895',
     artist_id: '28',
@@ -1869,7 +1869,7 @@ Painting.create!([
   },
   {
     painting_name: "Chalk Cliffs on Rügen",
-    image: "Chalk_Cliffs_on_Rügen_1818.jpg",
+    image: "Chalk_Cliffs_on_Rugen_1818.jpg",
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1818',
     artist_id: '37',

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import fetchPeriods from '../actions/periodActions.js';
 
-export class Period extends Component {
+export default class Period extends React.Component {
   render() {
     return (
       <div>
@@ -10,5 +10,3 @@ export class Period extends Component {
     );
   }
 }
-
-export default Period;
