@@ -4,5 +4,9 @@ Rails.application.routes.draw do
     resources :paintings
     resources :periods
     resources :artists
+
+    resources :periods do
+      resources :artists
+    end
   end
 end

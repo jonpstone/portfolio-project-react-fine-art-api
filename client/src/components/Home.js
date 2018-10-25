@@ -15,8 +15,8 @@ export default class Home extends React.Component {
       const styles = {maxHeight: "100%", maxWidth: "100%"};
       const returnedPainting = [data];
       const painting = returnedPainting.map((painting) => {
-        if (painting.id === paintingId) {
 
+        if (painting.id === paintingId) {
           return (
             <div>
               <NavLink to={`/painting/${painting.id}`}>
@@ -30,11 +30,11 @@ export default class Home extends React.Component {
               </NavLink>
               {/* api test area */}
               {/* <img
-              src="images/renaissance/Virgin_and_Child_with_Canon_van_der_Paele_1436.jpg"
-              alt="NOT FOUND!!!!!!!!!!!!!!"
-              style={styles}
-            />
-            <p>Virgin_and_Child_with_Canon_van_der_Paele_1436</p> */}
+                src="images/romanticism/Trinita_dei_Monti_2828.jpg"
+                alt="NOT FOUND!!!!!!!!!!!!!!"
+                style={styles}
+              />
+              <p>Trinità_dei_Monti_2828</p> */}
             </div>
           );
         }

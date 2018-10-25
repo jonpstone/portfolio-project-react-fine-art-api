@@ -1,33 +1,38 @@
 import React from 'react';
+import ArtistListItem from './ArtistListItem'
 
 export default class PeriodList extends React.Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     artists: [],
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      periodFetchId: props.match.params.id,
+      periodArtists: [],
+    };
+    console.log(props)
+  }
   
-  // componentDidMount() {
-  //   fetch(`api/periods`)
-  //   .then(results => {
-  //     return results.json();
-  //   }).then(data => {
-  //     console.log(data);
-  //     let periods = data.map((item) => {
-  //       return(
-  //         <div>
-  //           <li key={item.id}>{item.period_name}</li>
-  //         </div>
-  //       );
-  //     })
-  //     this.setState({ periods });
-  //   })
-  // }
+  componentDidMount() {
+    fetch(`/api/periods/${this.state.periodFetchId}/artists`)
+    .then(res => res.json())
+    .then(data => {
+      
+      const returnedPeriod = [data];
+      const periodArtists = returnedPeriod.map((artist) => {
+
+          return ( 
+            <div>
+              {console.log("Paintings", artist)}
+            </div>
+          );
+      })
+      this.setState({ periodArtists });
+    })
+  }
 
   render() {
     return(
       <div>
+        <ArtistListItem />
       </div>
     );
   }

@@ -11,12 +11,13 @@ export default class PeriodList extends React.Component {
     .then(res => res.json())
     .then(data => {
       
+      console.log(data);
       const styles = {maxHeight: "900px", maxWidth: "900px"};
       const periods = data.map((period) => {
           
         return(
           <div>
-            <NavLink to={`/periods/${period.id}/artists`}>
+            <NavLink to={`/period/${period.id}`}>
               <img 
                 src={`images/${period.period_name}/${
                   period.paintings[

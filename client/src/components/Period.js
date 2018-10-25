@@ -1,7 +1,9 @@
 import React from 'react';
-import fetchPeriods from '../actions/periodActions.js';
 
 export default class Period extends React.Component {
+  state = {
+    periodArtists: [],
+  }
   render() {
     return (
       <div>
