@@ -24,6 +24,7 @@ export default class PeriodList extends React.Component {
             <h2>{artist.artist_name}</h2>
             { 
               artist.paintings.map((painting) => {
+                console.log("PAINTING IMAGE", painting.image)
                 return (
                   <img
                     src={painting.image}

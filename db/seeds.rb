@@ -50,6 +50,8 @@ Artist.create!([
   {artist_name: 'J. M. W. Turner', profile: 'images/romanticism/turner/turner.jpg', period_id: '6'}
 ])
 
+
+
 Painting.create!([
   {
     painting_name: 'Alnwick Castle',
@@ -2533,7 +2535,7 @@ Painting.create!([
   },
   {
     painting_name: 'Alexander III receiving rural district elders in the yard of Petrovsky Palace in Moscow',
-    image: 'Alexander_III_receiving_rural_district_elders_in_the_yard_of_Petrovsky_Palace_in_Moscow_1886.jpg',
+    image: 'images/realism/repin/Alexander_III_receiving_rural_district_elders_in_the_yard_of_Petrovsky_Palace_in_Moscow_1886.jpg',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1886',
     artist_id: '29',
