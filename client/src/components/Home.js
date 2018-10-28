@@ -7,7 +7,7 @@ export default class Home extends React.Component {
   };
 
   componentDidMount() {
-    const paintingId = Math.floor(Math.random() * 274);
+    const paintingId = Math.floor(Math.random() * 444);
     fetch(`api/paintings/${paintingId}`)
     .then(res => res.json())
     .then(data => {
@@ -21,20 +21,11 @@ export default class Home extends React.Component {
             <div>
               <NavLink to={`/painting/${painting.id}`}>
                 <img
-                  src={`images/${painting.period.period_name}/${
-                    painting.image
-                  }`}
+                  src={`/${painting.image}`}
                   alt="Random Artwork"
                   style={styles}
                 />
               </NavLink>
-              {/* api test area */}
-              {/* <img
-                src="images/romanticism/Trinita_dei_Monti_2828.jpg"
-                alt="NOT FOUND!!!!!!!!!!!!!!"
-                style={styles}
-              />
-              <p>Trinità_dei_Monti_2828</p> */}
             </div>
           );
         }

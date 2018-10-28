@@ -11,7 +11,6 @@ export default class PeriodList extends React.Component {
     .then(res => res.json())
     .then(data => {
       
-      console.log(data);
       const styles = {maxHeight: "900px", maxWidth: "900px"};
       const periods = data.map((period) => {
           
@@ -19,7 +18,7 @@ export default class PeriodList extends React.Component {
           <div>
             <NavLink to={`/period/${period.id}`}>
               <img 
-                src={`images/${period.period_name}/${
+                src={`${
                   period.paintings[
                     Math.floor(Math.random() * period.paintings.length)
                   ].image
@@ -42,7 +41,7 @@ export default class PeriodList extends React.Component {
     if (!periods) {
       return <div>Loading artistic periods...</div>
     } else {
-      return(
+      return (
         <div>
           {this.state.periods}
         </div>

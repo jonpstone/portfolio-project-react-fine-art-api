@@ -18,11 +18,12 @@ export class Painting extends React.Component {
       const styles = {maxHeight: "1000px", maxWidth: "1000px"};
       const returnedPainting = [data];
       const painting = returnedPainting.map((painting) => {
+        console.log(painting.image);
 
         return (
           <div>
             <img
-              src={`/images/${painting.period.period_name}/${painting.image}`}
+              src={`/${painting.image}`}
               alt="Selected Artwork"
               style={styles}
             />

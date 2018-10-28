@@ -1,5 +1,4 @@
 import React from 'react';
-import ArtistListItem from './ArtistListItem'
 
 export default class PeriodList extends React.Component {
   constructor(props) {
@@ -8,31 +7,43 @@ export default class PeriodList extends React.Component {
       periodFetchId: props.match.params.id,
       periodArtists: [],
     };
-    console.log(props)
   }
   
   componentDidMount() {
-    fetch(`/api/periods/${this.state.periodFetchId}/artists`)
+    fetch(`/api/periods/${this.state.periodFetchId}`)
     .then(res => res.json())
     .then(data => {
       
       const returnedPeriod = [data];
-      const periodArtists = returnedPeriod.map((artist) => {
+      console.log("Period", returnedPeriod);
+      const styles = {maxHeight: "100px", maxWidth: "100px"};
+      const periodArtists = returnedPeriod[0].artists.map((artist) => {
 
-          return ( 
-            <div>
-              {console.log("Paintings", artist)}
-            </div>
-          );
+        return (
+          <div>
+            <h2>{artist.artist_name}</h2>
+            { 
+              artist.paintings.map((painting) => {
+                return (
+                  <img
+                    src={painting.image}
+                    alt="Painting Thumbnail"
+                    style={styles}
+                  />
+                )
+              })
+            }
+          </div>
+        );
       })
       this.setState({ periodArtists });
     })
   }
 
   render() {
-    return(
+    return (
       <div>
-        <ArtistListItem />
+        {this.state.periodArtists}
       </div>
     );
   }
