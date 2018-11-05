@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import paintingsReducer from './paintings_reducer';
+import paintingReducer from './paintings_reducer';
 
 const rootReducer = combineReducers({
-  paintings: paintingsReducer
+  painting: paintingReducer
 });
 
 export default rootReducer;

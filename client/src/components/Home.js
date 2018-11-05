@@ -1,46 +1,32 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchRandomPainting } from '../actions/index'
 
-export default class Home extends React.Component {
-  state = {
-    painting: []
-  };
+class Home extends React.Component {
 
   componentDidMount() {
-    const paintingId = Math.floor(Math.random() * 444);
-    fetch(`api/paintings/${paintingId}`)
-    .then(res => res.json())
-    .then(data => {
-      
-      const styles = {maxHeight: "100%", maxWidth: "100%"};
-      const returnedPainting = [data];
-      const painting = returnedPainting.map((painting) => {
-
-        if (painting.id === paintingId) {
-          return (
-            <div>
-              <NavLink to={`/painting/${painting.id}`}>
-                <img
-                  src={`/${painting.image}`}
-                  alt="Random Artwork"
-                  style={styles}
-                />
-              </NavLink>
-            </div>
-          );
-        }
-      })
-      this.setState({ painting });
-    })
+    this.props.fetchRandomPainting();
   }
 
   render() {
+    let artistName = this.props.painting.artist.artist_name !== undefined ? 
+      this.props.painting.artist.artist_name : null;
+    
+    console.log("ARTIST", artistName);
 
     return(
       <div>
-        {this.state.painting}
+        {artistName}
       </div>
     );
   }
 }
 
+const mapStateToProps = (state) => {
+  return ({
+    painting: state.painting
+  })
+}
+
+export default connect(mapStateToProps, {fetchRandomPainting})(Home);

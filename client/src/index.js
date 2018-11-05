@@ -8,7 +8,6 @@ import rootReducer from './reducers';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-
 const store = createStore(
   rootReducer,
   compose (
