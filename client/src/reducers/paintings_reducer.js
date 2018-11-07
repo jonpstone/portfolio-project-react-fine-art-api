@@ -1,4 +1,13 @@
-export default function paintingReducer(state = {}, action) {
+export default function paintingReducer(
+  state = {
+    artist: {
+      artist_name: "",
+    },
+    painting_name: "",
+    image: "",
+    year: null,
+  },
+  action) {
   switch ( action.type ) {
     case 'GET_PAINTINGS_SUCCESS':
       return action.paintings;

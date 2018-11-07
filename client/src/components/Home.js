@@ -5,21 +5,21 @@ import { fetchRandomPainting } from '../actions/index'
 
 class Home extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchRandomPainting();
-  }
-
-  render() {
-    let artistName = this.props.painting.artist.artist_name !== undefined ? 
-      this.props.painting.artist.artist_name : null;
-    
-    console.log("ARTIST", artistName);
-
-    return(
+render() {
+  if (this.props.painting.artist.artist_name) {
+    const artistName = this.props.painting.artist.artist_name;
+    return (
       <div>
         {artistName}
       </div>
     );
+  }
+  else
+    return (
+      <div>
+
+      </div>
+    )
   }
 }
 

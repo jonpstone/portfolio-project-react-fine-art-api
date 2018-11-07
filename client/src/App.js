@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import AppRouter from './routers/AppRouter';
 import './App.css';
+import { connect } from 'react-redux';
+import { fetchRandomPainting } from './actions/index'
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.fetchRandomPainting();
+  }
+
   render() {
     return (
       <div className="App">
@@ -12,4 +19,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(null, {fetchRandomPainting})(App);
