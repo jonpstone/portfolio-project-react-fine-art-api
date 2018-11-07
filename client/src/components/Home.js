@@ -5,21 +5,25 @@ import { fetchRandomPainting } from '../actions/index'
 
 class Home extends React.Component {
 
-render() {
-  if (this.props.painting.artist.artist_name) {
-    const artistName = this.props.painting.artist.artist_name;
-    return (
-      <div>
-        {artistName}
-      </div>
-    );
-  }
-  else
-    return (
-      <div>
+  render() {
+    const painting = this.props.painting
+    const styles = {maxHeight: "100%", maxWidth: "100%"};
 
-      </div>
-    )
+    return(
+      <NavLink to={`/painting/${painting.id}`}>
+
+        <div className="landingPageWrapper">
+          <h1 className="paintingName">{painting.painting_name}</h1>
+          <h1 className="paintingYear">{painting.year}</h1>
+          <img
+            src={`/${painting.image}`}
+            alt="Loading..."
+            style={styles}
+          />
+        </div>
+
+      </NavLink>
+    );
   }
 }
 
