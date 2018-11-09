@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     resources :periods do
       resources :artists
     end
+
+    get '/random', to: "paintings#random"
   end
 end

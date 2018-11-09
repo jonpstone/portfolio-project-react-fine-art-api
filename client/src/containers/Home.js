@@ -1,9 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchRandomPainting } from '../actions/index'
+import { fetchRandomPainting } from '../actions/paintingActions/index'
 
 class Home extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchRandomPainting();
+  }
 
   render() {
     const painting = this.props.painting
@@ -11,17 +15,16 @@ class Home extends React.Component {
 
     return(
       <NavLink to={`/painting/${painting.id}`}>
-
         <div className="landingPageWrapper">
           <h1 className="paintingName">{painting.painting_name}</h1>
           <h1 className="paintingYear">{painting.year}</h1>
           <img
+            className="paintingImage"
             src={`/${painting.image}`}
             alt="Loading..."
             style={styles}
           />
         </div>
-
       </NavLink>
     );
   }

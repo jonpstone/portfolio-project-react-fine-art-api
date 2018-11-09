@@ -1,54 +1,35 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 export class Painting extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      paintingFetchId: props.match.params.id,
-      painting: [],
-    };
-  }
-
-  componentDidMount() {
-    fetch(`/api/paintings/${this.state.paintingFetchId}`)
-    .then(res => res.json())
-    .then(data => {
-
-      const styles = {maxHeight: "1000px", maxWidth: "1000px"};
-      const returnedPainting = [data];
-      const painting = returnedPainting.map((painting) => {
-        console.log(painting.image);
-
-        return (
-          <div>
-            <img
-              src={`/${painting.image}`}
-              alt="Selected Artwork"
-              style={styles}
-            />
-            <h3>{painting.painting_name} By {painting.artist.artist_name}</h3>
-            <p>{painting.about}</p>
-          </div>
-        );
-      })
-      this.setState({ painting });
-    })
-  }
-
   render() {
-    const { painting } = this.state;
+    const painting = this.props.painting
+    const styles = {maxHeight: "1000px", maxWidth: "1000px"};
 
-    if (!painting) {
-      return <div>Loading serene beauty...</div>
-    } else {
-      return(
-        <div>
-          {this.state.painting}
+    return(
+      <div className="landingPageWrapper">
+        <img
+          className="paintingImage"
+          src={`/${painting.image}`}
+          alt="Loading..."
+          style={styles}
+        />
+        <div className="paintingInfo">
+          <h2 className="paintingDetail">
+            {painting.painting_name} by {painting.artist.artist_name} {painting.year}
+          </h2>
+          <p className="paintingAbout">{painting.about}</p>
         </div>
-      );
-    }
+      </div>
+    );
   }
 }
 
-export default Painting;
+const mapStateToProps = (state) => {
+  return ({
+    painting: state.painting
+  })
+}
+
+export default connect(mapStateToProps)(Painting);

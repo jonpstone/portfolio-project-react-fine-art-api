@@ -8,4 +8,9 @@ class PaintingsController < ApplicationController
     @painting = Painting.find(params[:id])
     render json: @painting
   end
+
+  def random
+    @painting = Painting.all.sample
+    render json: @painting
+  end
 end

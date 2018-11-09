@@ -3,10 +3,9 @@ export default function paintingReducer(
     painting_name: "",
     image: "",
     year: null,
-  },
-  action) {
+  }, action) {
   switch ( action.type ) {
-    case 'GET_RANDOM_PAINTING_SUCCESS':
+    case 'GET_PAINTING_SUCCESS':
       return action.painting;
     default:
       return state;
