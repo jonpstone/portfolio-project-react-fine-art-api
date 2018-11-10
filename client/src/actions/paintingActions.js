@@ -30,11 +30,11 @@ export const fetchRandomPainting = () => {
   }
 }
 
-export const fetchSelectedPainting = (url) => {
-  return dispatch => {
-    return fetch(`/api/${url}`)
-      .then(response => response.json())
-      .then(painting => dispatch(setPainting(painting)))
-      .catch(error => console.log(error));
-  }
-}
+// export const fetchSelectedPainting = (url) => {
+//   return dispatch => {
+//     return fetch(`api/${url}`)
+//       .then(response => response.json())
+//       .then(painting => dispatch(setPainting(painting)))
+//       .catch(error => console.log(error));
+//   }
+// }

@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import paintingReducer from './paintings_reducer';
+import paintingReducer from './paintingsReducer';
+import periodsReducer from './periodsReducer';
 
 const rootReducer = combineReducers({
-  painting: paintingReducer
+  painting: paintingReducer,
+  periods: periodsReducer
 });
 
 export default rootReducer;
