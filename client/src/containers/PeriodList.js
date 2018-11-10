@@ -4,9 +4,11 @@ import Period from '../components/Period';
 
 class PeriodList extends React.Component {
 
-  // const randomPeriodImage = () => {
-
-  // }
+  randomImagePicker = (paintings) => {
+    const paintingId = Math.floor(Math.random() * (paintings.length - 1));
+    const paintingUrl = paintings[paintingId].image
+    return paintingUrl
+  }
 
   render() {
     return(
@@ -15,7 +17,7 @@ class PeriodList extends React.Component {
         <Period
           key={period.id}
           periodName={period.period_name}
-          // image={}
+          image={`/${this.randomImagePicker(period.paintings)}`}
         />
       ))}
       </div>

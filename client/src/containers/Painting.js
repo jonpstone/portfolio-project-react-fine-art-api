@@ -12,7 +12,7 @@ export class Painting extends React.Component {
         <img
           className="paintingImage"
           src={`/${painting.image}`}
-          alt="Loading..."
+          alt="Random Selection"
           style={styles}
         />
         <div className="paintingInfo">
