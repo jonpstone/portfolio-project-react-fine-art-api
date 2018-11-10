@@ -1,14 +1,13 @@
 import React from 'react';
 
-export default class Period extends React.Component {
-  state = {
-    periodArtists: [],
-  }
-  render() {
-    return (
-      <div>
-        I am the Period Page.
-      </div>
-    );
-  }
-}
+const Period = (props) => (
+  <div className="period">
+    <h1 className="periodTitle">{props.periodName}</h1>
+    {/* <img
+      src={}
+      alt="Random Period Piece"
+    /> */}
+  </div>
+);
+
+export default Period;

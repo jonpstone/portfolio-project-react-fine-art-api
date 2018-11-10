@@ -1,19 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Period from '../components/Period';
 
 class PeriodList extends React.Component {
+
+  // const randomPeriodImage = () => {
+
+  // }
 
   render() {
     return(
       <div className="List">
       {this.props.periods.map((period) => (
-        <li className="Period">
-          <h2>{period.period_name}</h2>
-          <img
-            src=""
-            alt="Listed Period"
-          />
-        </li>
+        <Period
+          key={period.id}
+          periodName={period.period_name}
+          // image={}
+        />
       ))}
       </div>
     );
