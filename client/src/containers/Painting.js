@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-export class Painting extends React.Component {
+class Painting extends React.Component {
 
   render() {
     const painting = this.props.painting

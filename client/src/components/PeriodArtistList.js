@@ -1,51 +1,26 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
-export default class PeriodList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      periodFetchId: props.match.params.id,
-      periodArtists: [],
-    };
-  }
-  
-  componentDidMount() {
-    fetch(`/api/periods/${this.state.periodFetchId}`)
-    .then(res => res.json())
-    .then(data => {
-      
-      const returnedPeriod = [data];
-      console.log("Period", returnedPeriod);
-      const styles = {maxHeight: "100px", maxWidth: "100px"};
-      const periodArtists = returnedPeriod[0].artists.map((artist) => {
 
-        return (
-          <div>
-            <h2>{artist.artist_name}</h2>
-            { 
-              artist.paintings.map((painting) => {
-                console.log("PAINTING IMAGE", painting.image)
-                return (
-                  <img
-                    src={painting.image}
-                    alt="Painting Thumbnail"
-                    style={styles}
-                  />
-                )
-              })
-            }
-          </div>
-        );
-      })
-      this.setState({ periodArtists });
-    })
-  }
+class PeriodArtistList extends React.Component {
 
   render() {
+    const periodId = this.props.match.params.id;
+    const selectedPeriod = this.props.periods[periodId - 1];
+
     return (
       <div>
-        {this.state.periodArtists}
+        {console.log("VAR", selectedPeriod)}
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return ({
+    periods: state.periods
+  })
+}
+
+export default connect(mapStateToProps)(PeriodArtistList);

@@ -6,8 +6,8 @@ class PeriodList extends React.Component {
 
   randomImagePicker = (paintings) => {
     const paintingId = Math.floor(Math.random() * (paintings.length - 1));
-    const paintingUrl = paintings[paintingId].image
-    return paintingUrl
+    const paintingUrl = paintings[paintingId].image;
+    return paintingUrl;
   }
 
   render() {
@@ -16,6 +16,7 @@ class PeriodList extends React.Component {
       {this.props.periods.map((period) => (
         <Period
           key={period.id}
+          PeriodId={period.id}
           periodName={period.period_name}
           image={`/${this.randomImagePicker(period.paintings)}`}
         />
