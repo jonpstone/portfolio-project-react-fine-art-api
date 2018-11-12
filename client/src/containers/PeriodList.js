@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import Period from '../components/Period';
 
 class PeriodList extends React.Component {
@@ -13,14 +14,16 @@ class PeriodList extends React.Component {
   render() {
     return(
       <div className="List">
-      {this.props.periods.map((period) => (
-        <Period
-          key={period.id}
-          PeriodId={period.id}
-          periodName={period.period_name}
-          image={`/${this.randomImagePicker(period.paintings)}`}
-        />
-      ))}
+      {
+        this.props.periods.map((period) => (
+          <NavLink to={`/period/${period.id}`} key={period.id}>
+            <Period
+              periodName={period.period_name}
+              image={`/${this.randomImagePicker(period.paintings)}`}
+            />
+          </NavLink>
+        ))
+      }
       </div>
     );
   }

@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from '../components/Header';
 import Home from '../containers/Home'
 import PeriodList from '../containers/PeriodList';
-import About from '../components/About';
 import Painting from '../containers/Painting';
-import PeriodArtistList from '../components/PeriodArtistList';
+import PeriodArtistList from '../containers/PeriodArtistList';
+import About from '../components/About';
 import NotFound from '../components/NotFound';
 
 const AppRouter = () => (
