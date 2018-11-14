@@ -9,7 +9,7 @@ Period.create!([
 
 Artist.create!([
   {artist_name: 'Canaletto', profile: 'images/baroque/canaletto/canaletto.jpg', period_id: '1'},
-  {artist_name: 'Caravaggio', profile: 'images/baroque/carvaggio/Carvaggio.jpg', period_id: '1'},
+  {artist_name: 'Caravaggio', profile: 'images/baroque/caravaggio/Carvaggio.jpg', period_id: '1'},
   {artist_name: 'Aelbert Cuyp', profile: 'images/baroque/cuyp/cuyp.jpg', period_id: '1'},
   {artist_name: 'Frans Hals', profile: 'images/baroque/hals/hals.jpg', period_id: '1'},
   {artist_name: 'Claude Lorrain', profile: 'images/baroque/lorrain/lorrain.jpg', period_id: '1'},
@@ -34,8 +34,8 @@ Artist.create!([
   {artist_name: 'Winslow Homer', profile: 'images/realism/homer/Homer.jpeg', period_id: '4'},
   {artist_name: 'Ivan Kramskoi', profile: 'images/realism/kramskoi/Kramskoi.jpg', period_id: '4'},
   {artist_name: 'Édouard Manet', profile: 'images/realism/manet/Manet.jpg', period_id: '4'},
-  {artist_name: 'Jean-François Millet', profile: 'images/realism/Millet.jpg', period_id: '4'},
-  {artist_name: 'Mihály Munkácsy', profile: 'images/realism/munkacsy.jpg', period_id: '4'},
+  {artist_name: 'Jean-François Millet', profile: 'images/realism/millet/Millet.jpg', period_id: '4'},
+  {artist_name: 'Mihály Munkácsy', profile: 'images/realism/munkacsy/munkacsy.jpg', period_id: '4'},
   {artist_name: 'Ilya Repin', profile: 'images/realism/repin/repin.jpg', period_id: '4'},
   {artist_name: 'Sandro Botticelli', profile: 'images/renaissance/botticelli/Botticelli.jpg', period_id: '5'},
   {artist_name: 'Leonardo da Vinci', profile: 'images/renaissance/da_vinci/da_vinci.jpg', period_id: '5'},
@@ -49,8 +49,6 @@ Artist.create!([
   {artist_name: 'Francisco Goya', profile: 'images/romanticism/goya/goya.jpg', period_id: '6'},
   {artist_name: 'J. M. W. Turner', profile: 'images/romanticism/turner/turner.jpg', period_id: '6'}
 ])
-
-
 
 Painting.create!([
   {
@@ -103,7 +101,7 @@ Painting.create!([
   },
   {
     painting_name: 'Piazza San Marco with the Basilica',
-    image: 'images/baroque/canaletto/Piazza_San_Marco_with_the_Basilica,_by_Canaletto_1730.jpg',
+    image: 'images/baroque/canaletto/Piazza_San_Marco_with_the_Basilica_by_Canaletto_1730.jpg',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1730',
     artist_id: '1',
@@ -138,14 +136,6 @@ Painting.create!([
     image: 'images/baroque/canaletto/The_City_Seen_Through_an_Arch_of_Westminster_Bridge_1727.jpg',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1727',
-    artist_id: '1',
-    period_id: '1'
-  },
-  {
-    painting_name: 'The Entrance to the Grand Canal, Venice',
-    image: 'images/baroque/canaletto/The_Entrance_to_the_Grand_Canal,_Venice_1730.jpg',
-    about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
-    year: '1730',
     artist_id: '1',
     period_id: '1'
   },
@@ -383,7 +373,7 @@ Painting.create!([
   },
   {
     painting_name: 'The Banquet of the Officers of the St George Militia Company',
-    image: 'images/baroque/hals/The_Banquet_of_the_Officers_of the_St_George_Militia_Company_1627.jpg',
+    image: 'images/baroque/hals/The_Banquet_of_the_Officers_of_the_St_George_Militia_Company_1627.jpg',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1627',
     artist_id: '4',
@@ -2271,7 +2261,7 @@ Painting.create!([
   },
   {
     painting_name: 'A Bar at the Folies-Bergère',
-    image: 'images/realism/manet/A_Bar_at_the_Folies_Bergère_1882.jpg',
+    image: 'images/realism/manet/A_Bar_at_the_Folies-Bergere_1882.jpg',
     about: "Pulvinar nam, hendrerit porta? Eros mauris orci ultrices magna proin massa consectetur. Neque mattis ultricies quisque donec ante. Ridiculus malesuada arcu vestibulum platea. Congue bibendum cras enim fermentum blandit fermentum platea taciti cursus diam fermentum. Feugiat blandit cursus lectus torquent! Pharetra potenti risus taciti per duis netus quam duis per donec. Tincidunt taciti luctus suscipit quisque laoreet ipsum praesent consequat torquent aliquam dis condimentum. Morbi sagittis habitant dis nunc penatibus sodales felis posuere. Habitasse hendrerit pretium porta, leo scelerisque quam tempor metus? Litora in montes.",
     year: '1882',
     artist_id: '26',
