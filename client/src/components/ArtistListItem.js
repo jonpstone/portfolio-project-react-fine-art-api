@@ -1,20 +1,38 @@
 import React from 'react';
-import { Image, Grid, Col, Row } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
+import Image from 'react-image-resizer';
 
 const ArtistListItem = (props) => {
-
+  const paintingStyles = {
+    height: "100px",
+    display: "flex",
+    float: "left",
+    margin: "auto",
+  };
+  
   return(
     <div className="artist">
-      <h2 className="artistName">{props.artistName}</h2>
-      <Image src={`/${props.profilePic}`} />
-      {props.paintings.map((painting) => (
-        
-        <Grid>
-          <Row xs={6} md={4}>
-            <Image src={`/${painting.image}`} thumbnail float-left />
-          </Row>
-        </Grid>
-      ))}
+      <h2 className="artistName">{props.artistName}</h2> 
+      <Grid>
+        <Row>
+          <Col lg={2}>
+            <Image
+              src={`/${props.profilePic}`}
+              height={200}
+            />
+          </Col>
+          <Col lg={10}>
+            {props.paintings.map((art) => (
+              <img
+                id={art.id}
+                src={`/${art.image}`}
+                alt="Painting"
+                style={paintingStyles}
+              />
+            ))}
+          </Col>
+        </Row>
+      </Grid>
     </div>
   );
 }
