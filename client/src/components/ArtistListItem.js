@@ -1,14 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
-import Image from 'react-image-resizer';
 
 const ArtistListItem = (props) => {
-  const paintingStyles = {
-    height: "100px",
-    display: "flex",
-    float: "left",
-    margin: "auto",
-  };
   
   return(
     <div className="artist">
@@ -16,18 +10,17 @@ const ArtistListItem = (props) => {
       <Grid>
         <Row>
           <Col lg={2}>
-            <Image
+            <img
               src={`/${props.profilePic}`}
-              height={200}
+              alt="Profile"
             />
           </Col>
           <Col lg={10}>
             {props.paintings.map((art) => (
               <img
                 id={art.id}
-                src={`/${art.image}`}
+                src={`/${art.image_thumb}`}
                 alt="Painting"
-                style={paintingStyles}
               />
             ))}
           </Col>

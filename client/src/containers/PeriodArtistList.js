@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import ArtistListItem from '../components/ArtistListItem';
-
 
 class PeriodArtistList extends React.Component {
 
@@ -15,12 +13,13 @@ class PeriodArtistList extends React.Component {
       <h1>{selectedPeriod.period_name}</h1>
         {
           selectedPeriod.artists.map((artist) => (
-            <ArtistListItem 
-              key={artist.id}
-              artistName={artist.artist_name}
-              profilePic={artist.profile}
-              paintings={artist.paintings}
-            />
+            <div key={artist.id}>
+              <ArtistListItem
+                artistName={artist.artist_name}
+                profilePic={artist.profile_thumb}
+                paintings={artist.paintings}
+              />
+            </div>
           ))
         }
       </div>
