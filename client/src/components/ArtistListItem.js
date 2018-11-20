@@ -17,11 +17,12 @@ const ArtistListItem = (props) => {
           </Col>
           <Col lg={10}>
             {props.paintings.map((art) => (
+              <NavLink to={`/painting/${art.id}`} key={art.id}>
               <img
-                id={art.id}
                 src={`/${art.image_thumb}`}
                 alt="Painting"
               />
+              </NavLink>
             ))}
           </Col>
         </Row>

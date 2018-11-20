@@ -1,11 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchSelectedPainting } from '../actions/paintingActions';
 
 class Painting extends React.Component {
+
+  componentDidMount() {
+    let newId = this.props.match.params.id;
+    this.props.fetchSelectedPainting(newId);
+  }
 
   render() {
     const painting = this.props.painting
     const styles = {maxHeight: "1000px", maxWidth: "1000px"};
+
+    console.log("PROPS", this.props);
+    console.log("STATE", this.state);
 
     return(
       <div className="landingPageWrapper">
@@ -32,4 +41,4 @@ const mapStateToProps = (state) => {
   })
 }
 
-export default connect(mapStateToProps)(Painting);
+export default connect(mapStateToProps, {fetchSelectedPainting})(Painting);

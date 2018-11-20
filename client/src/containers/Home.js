@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchRandomPainting } from '../actions/paintingActions'
+import { fetchRandomPainting } from '../actions/paintingActions';
 
 class Home extends React.Component {
 
