@@ -4,7 +4,7 @@ import periodsReducer from './periodsReducer';
 
 const rootReducer = combineReducers({
   painting: paintingReducer,
-  periods: periodsReducer
+  periods: periodsReducer,
 });
 
 export default rootReducer;

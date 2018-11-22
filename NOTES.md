@@ -34,7 +34,7 @@ Contains rows of different periods, which will feature background art from each 
 
 --------------------------------------------------------------------------------
 
-Period Artist List Page '/periods/:id/artists'
+Period Artist List Page '/period/:id/artists'
 
 Period Artist List Component "PeriodArtistList.js"... (stateless)
 
@@ -42,23 +42,15 @@ Shows all artists associated with this period in Netflix style rows, showing all
 
 --------------------------------------------------------------------------------
 
-Artist List Page '/artists'
-
-Artists Component "ArtistsList.js"... (stateless)
-
-Contains rows of different artists featuring one of their paintings, the list will be in alphabetical order.
-
---------------------------------------------------------------------------------
-
 Artist Profile Page '/artists/:id'
 
 Artist Component "ArtistProfile.js"... (stateless)
 
-An artist profile page that displays bio and a netflix style cascade of that artists works.
+An artist profile page that displays bio and a netflix style cascade of that artist's works.
 
 --------------------------------------------------------------------------------
 
-Painting Page '/paintings/:id'
+Painting Page '/painting/:id'
 
 Painting Component "Painting.js"... (container)
 

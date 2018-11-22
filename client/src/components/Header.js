@@ -5,7 +5,6 @@ const Header = () => (
   <header>
     <div className="header">
       <h1 className="header_title">Oscar Henry</h1>
-      <h3 className="header_subtitle">House of Fine Art</h3>
       <div className="nav_links">
         <NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink>
         <NavLink to="/periods" activeClassName="is-active">Periods</NavLink>

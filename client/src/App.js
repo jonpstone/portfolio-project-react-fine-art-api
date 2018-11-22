@@ -1,9 +1,8 @@
 import React from 'react';
 import AppRouter from './routers/AppRouter';
 import { connect } from 'react-redux';
-import './App.css';
 import { fetchPeriods } from './actions/periodActions'
-
+import './styles/styles.scss';
 
 class App extends React.Component {
 
