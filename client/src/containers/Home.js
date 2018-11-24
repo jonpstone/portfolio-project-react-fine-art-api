@@ -11,35 +11,25 @@ class Home extends React.Component {
 
   render() {
     const painting = this.props.painting
-    const styles = {maxHeight: "100%", maxWidth: "100%"};
-    const logoSyle = {maxHeight: "150px", maxWidth: "160px"};
 
     return(
-      <NavLink to={`/painting/${painting.id}`}>
-        <div className="landingPageWrapper">
-          <div className="titleLogoGroup">
-            <h1 className="titleOne">Oscar</h1>
-            <img 
-              className="logo" 
-              src={`/images/coat_of_arms_stone.png`}
-              alt="os-logo"
-              style={logoSyle}
-            />
-            <h1 className="titleTwo">Henry</h1>
-            <h3 className="headerSubtitle">House of Fine Art</h3>
-          </div>
-          <div className="imageDetailGroup">
-            <h1 className="paintingName">{painting.painting_name}</h1>
-            <h1 className="paintingYear">{painting.year}</h1>
-            <img
-              className="paintingImage"
-              src={`/${painting.image}`}
-              alt="Loading..."
-              style={styles}
-            />
-          </div>
+      <div className="landing-page-wrapper">
+        <div id="bg">
+          <img
+            src={`/${painting.image}`}
+            alt="Landing Page Background"
+          />
         </div>
-      </NavLink>
+        <NavLink to={`/painting/${painting.id}`}>
+          <div className="image-detail-group">
+            <div className="hover-button" id="painting-name">
+              <span className="hover-button--off">{painting.painting_name}</span>
+              <span className="hover-button--on">{painting.painting_name}</span>
+            </div>
+            <h1 className="painting-year">c.{painting.year}</h1>
+          </div>
+        </NavLink>
+      </div>
     );
   }
 }

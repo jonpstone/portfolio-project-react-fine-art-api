@@ -1,0 +1,22 @@
+// Colors
+$off-white: #f4f4ef;
+$pure-white: #FFFFFF;
+$hover-grey: #3B3B3B;
+$light-pink: #E0BFBF;
+$navy-blue: #030614;
+
+// Shadows
+$hover-text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+$text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+// Hover
+.hover-button .hover-button--on,
+.hover-button:hover .hover-button--off {
+  display: none;
+}
+
+.hover-button:hover .hover-button--on {
+  display: inline;
+  color: $hover-grey;
+  text-shadow: $hover-text-shadow;
+}

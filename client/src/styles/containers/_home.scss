@@ -1,0 +1,44 @@
+#bg {
+  position: fixed;
+  top: -45%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+}
+
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  z-index: -1;
+}
+
+.image-detail-group {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  color: $pure-white;
+  text-shadow: $text-shadow;
+}
+
+#painting-name {
+  position:absolute;
+  bottom: 6.2%;
+  left: 33%;
+  font-size: 5em;
+  z-index: 2;
+}
+
+.painting-year {
+  position: absolute;
+  bottom: 2%;
+  left: 1%;
+  font-size: 20em;
+  color: $light-pink;
+  z-index: 1;
+}

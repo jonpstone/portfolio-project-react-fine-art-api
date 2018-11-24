@@ -1,0 +1,54 @@
+#logo {
+  width: 12em;
+  height: 10em;
+  padding: 2em;
+}
+
+.title-logo-group {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.title {
+  font-family: 'IM Fell French Canon SC', serif;
+  font-size: 5em;
+  color: $pure-white;
+  text-shadow: $text-shadow;
+}
+
+.header-subtitle {
+  font-family: 'IM Fell French Canon', serif;
+  position: absolute;
+  text-align: center;
+  color: $pure-white;
+  text-shadow: $text-shadow;
+  top: 8%;
+  left: 42.9%;
+}
+
+.nav-links {
+  font-family: 'IM Fell French Canon', serif;
+  display: flex;
+}
+
+#periods-link {
+  position: absolute;
+  color: $pure-white;
+  text-shadow: $text-shadow;
+  top: 1%;
+  left: 4%;
+}
+
+#about-link {
+  position: absolute;
+  color: $pure-white;
+  text-shadow: $text-shadow;
+  top: 1%;
+  right: 5%;
+}
