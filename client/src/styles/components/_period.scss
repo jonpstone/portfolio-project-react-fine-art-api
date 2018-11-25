@@ -1,0 +1,21 @@
+.period-wrapper {
+  overflow: hidden;
+}
+
+.period-title {
+  text-align: center;
+  font-style: italic;
+  font-size: 7.6em;
+  color: $pastel-mint;
+  text-shadow: $text-shadow;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.random-image {
+  z-index: 1;
+}
+
+.NavLink .period-title {
+  text-decoration: none;
+}

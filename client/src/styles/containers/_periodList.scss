@@ -1,0 +1,13 @@
+.list-wrapper {
+  background: $off-white;
+  position: absolute;
+  top: 10.5%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.list-wrapper:nth-child(2) {
+  background: red;
+}
