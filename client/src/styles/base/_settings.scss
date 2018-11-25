@@ -2,7 +2,7 @@
 $off-white: #f4f4ef;
 $pure-white: #FFFFFF;
 $hover-grey: #3B3B3B;
-$light-pink: #E0BFBF;
+$light-pink: #BF9DB7;
 $navy-blue: #030614;
 $pastel-mint: #eafff2;
 
@@ -18,6 +18,5 @@ $text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
 .hover-button:hover .hover-button--on {
   display: inline;
-  color: $hover-grey;
-  text-shadow: $hover-text-shadow;
+  font-style: italic;
 }

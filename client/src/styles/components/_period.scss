@@ -1,5 +1,10 @@
+.period-title h1 {
+  z-index: 3;
+}
+
 .period-wrapper {
   overflow: hidden;
+  opacity: .8;
 }
 
 .period-title {
@@ -10,12 +15,4 @@
   text-shadow: $text-shadow;
   text-decoration: none;
   z-index: 2;
-}
-
-.random-image {
-  z-index: 1;
-}
-
-.NavLink .period-title {
-  text-decoration: none;
 }
