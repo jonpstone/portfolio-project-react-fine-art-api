@@ -1,18 +1,20 @@
-.period-title h1 {
-  z-index: 3;
+.period-wrapper {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  opacity: .6;
 }
 
-.period-wrapper {
-  overflow: hidden;
-  opacity: .8;
+.period-wrapper img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100
 }
 
 .period-title {
-  text-align: center;
+  position: relative;
+  text-align: left;
   font-style: italic;
   font-size: 7.6em;
   color: $pastel-mint;
-  text-shadow: $text-shadow;
-  text-decoration: none;
-  z-index: 2;
 }

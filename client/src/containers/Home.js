@@ -20,15 +20,12 @@ class Home extends React.Component {
             alt="Landing Page Background"
           />
         </div>
-        <NavLink to={`/painting/${painting.id}`}>
           <div className="image-detail-group">
-            <div className="hover-button" id="painting-name">
-              <span className="hover-button--off">{painting.painting_name}</span>
-              <span className="hover-button--on">{painting.painting_name}</span>
-            </div>
+            <NavLink to={`/painting/${painting.id}`}>
+              <h1 className="painting-name">{painting.painting_name}</h1>
+            </NavLink>
             <h1 className="painting-year">c.{painting.year}</h1>
           </div>
-        </NavLink>
       </div>
     );
   }
