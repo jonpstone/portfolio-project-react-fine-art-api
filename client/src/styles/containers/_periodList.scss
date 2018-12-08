@@ -7,11 +7,3 @@
   left: 0;
   overflow: hidden;
 }
-
-.list-wrapper:nth-child(odd) {
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(2px);
-}

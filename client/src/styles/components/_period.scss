@@ -1,5 +1,4 @@
 .period-wrapper {
-  display: flex;
   position: relative;
   overflow: hidden;
   opacity: .6;
@@ -13,8 +12,16 @@
 
 .period-title {
   position: relative;
-  text-align: left;
   font-style: italic;
   font-size: 7.6em;
   color: $pastel-mint;
+  display: inline-block;
+  right: -100%;
+  transform: translateX(-100%);
+  transition: right 1s, transform 1s;
+}
+
+.period-wrapper:hover .period-title {
+  right: 0%;
+  transform: translateX(0%);
 }

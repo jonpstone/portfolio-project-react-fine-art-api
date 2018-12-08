@@ -9,8 +9,8 @@ class PeriodArtistList extends React.Component {
     const selectedPeriod = this.props.periods[periodId - 1];
 
     return (
-      <div className="artistList">
-      <h1>{selectedPeriod.period_name}</h1>
+      <div className="artist-list">
+        <h1>{selectedPeriod.period_name}</h1>
         {
           selectedPeriod.artists.map((artist) => (
             <div key={artist.id}>
