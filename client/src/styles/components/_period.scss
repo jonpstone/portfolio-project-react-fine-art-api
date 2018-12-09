@@ -12,7 +12,7 @@
 
 .period-title {
   position: relative;
-  font-style: italic;
+  // font-style: italic;
   font-size: 7.6em;
   color: $pastel-mint;
   display: inline-block;
@@ -22,6 +22,6 @@
 }
 
 .period-wrapper:hover .period-title {
-  right: 0%;
-  transform: translateX(0%);
+  right: -50%;
+  transform: translateX(-50%);
 }

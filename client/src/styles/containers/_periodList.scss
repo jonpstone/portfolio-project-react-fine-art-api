@@ -6,4 +6,27 @@
   right: 0;
   left: 0;
   overflow: hidden;
+  font-family: 'IM Fell English SC', serif;
+  text-transform: capitalize;
+}
+
+.list-wrapper :nth-child(2) {
+  font-family: 'Forum', cursive;
+  text-align: left;
+}
+
+.list-wrapper :nth-child(3) {
+  font-family: 'Playfair Display SC', serif;
+}
+
+.list-wrapper :nth-child(4) {
+  font-family: 'Pinyon Script', cursive;
+}
+
+.list-wrapper :nth-child(5) {
+  font-family: 'Metamorphous', cursive;
+}
+
+.list-wrapper :nth-child(6) {
+  font-family: 'Old Standard TT', serif;
 }

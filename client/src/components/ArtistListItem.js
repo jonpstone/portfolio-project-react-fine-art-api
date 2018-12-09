@@ -1,8 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
+import Slider from "react-slick";
 
 const ArtistListItem = (props) => {
+
+  const settings = {
+    className: "center",
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    slidesToScroll: 4,
+    variableWidth: true,
+  };
   
   return(
     <div className="artist">
@@ -16,14 +26,18 @@ const ArtistListItem = (props) => {
             />
           </Col>
           <Col lg={10}>
-            {props.paintings.map((art) => (
-              <NavLink to={`/painting/${art.id}`} key={art.id}>
-              <img
-                src={`/${art.image_thumb}`}
-                alt="Painting"
-              />
-              </NavLink>
-            ))}
+            <Slider {...settings}>
+              {props.paintings.map((art) => (
+                <NavLink to={`/painting/${art.id}`} key={art.id}>
+                  <img
+                    title={art.painting_name}
+                    id="painting"
+                    src={`/${art.image_thumb}`}
+                    alt="Painting"
+                  />
+                </NavLink>
+              ))}
+            </Slider>
           </Col>
         </Row>
       </Grid>
@@ -32,3 +46,4 @@ const ArtistListItem = (props) => {
 }
 
 export default ArtistListItem;
+

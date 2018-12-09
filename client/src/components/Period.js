@@ -14,7 +14,7 @@ const Period = (props) => {
             backgroundImage:`url(${props.image})`,
             backgroundSize:"cover"
           }}>
-          <h1 className="period-title">{props.periodName}.</h1>
+          <h1 className="period-title">{props.periodName}&nbsp;</h1>
         </div>
       </NavLink>
     </div>
