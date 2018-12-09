@@ -13,9 +13,6 @@ class Painting extends React.Component {
     const painting = this.props.painting
     const styles = {maxHeight: "1000px", maxWidth: "1000px"};
 
-    console.log("PROPS", this.props);
-    console.log("STATE", this.state);
-
     return(
       <div className="landingPageWrapper">
         <img

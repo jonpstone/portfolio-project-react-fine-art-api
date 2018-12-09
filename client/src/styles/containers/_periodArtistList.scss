@@ -12,3 +12,9 @@
   font-size: 6em;
   text-align: center;
 }
+
+.artist-list h1 {
+  position: fixed;
+  opacity: .1;
+  transform: rotate(90deg);
+}

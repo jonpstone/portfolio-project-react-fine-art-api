@@ -3,10 +3,22 @@
 }
 
 .center {
-  margin-top: 10.6%;
+  margin-top: 6.3em;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  color: grey;
+  color: $navy-blue;
+}
+
+.artist-name {
+  position:absolute;
+  left: 30%;
+  font-size: 4em;
+  font-style: italic;
+  color: $light-pink;
+}
+
+.artist {
+  margin-top: 3em;
 }

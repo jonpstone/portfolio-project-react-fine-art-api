@@ -16,7 +16,7 @@ const ArtistListItem = (props) => {
   
   return(
     <div className="artist">
-      <h2 className="artistName">{props.artistName}</h2> 
+      <h2 className="artist-name">{props.artistName}</h2> 
       <Grid>
         <Row>
           <Col lg={2}>
