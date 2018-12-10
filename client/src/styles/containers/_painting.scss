@@ -15,8 +15,6 @@
 }
 
 .img-container img {
-  // position: absolute;
-  // margin: 1.1%;
   max-width: 64em;
   max-height: 50em;
   margin-top: 2.5%;
@@ -36,19 +34,29 @@
 
 .painting-detail {
   position: absolute;
-  left: 1.25%;
+  left: 2%;
+  text-align: left;
   font-style: italic;
   bottom: 3%;
+  top: 80.6%;
+  width: 64.9em;
 }
 
 .painting-detail-year {
   font-size: 11em;
   position: absolute;
-  bottom: -37%;
-  left: 68%;
+  bottom: -3%;
+  left: 63%;
   opacity: .1;
 }
 
 .painting-detail-title {
-  bottom: 15%;
+  position: absolute;
+  bottom: 14%;
+}
+
+.painting-detail-artist {
+  position: absolute;
+  color: $light-pink;
+  top: 10%;
 }

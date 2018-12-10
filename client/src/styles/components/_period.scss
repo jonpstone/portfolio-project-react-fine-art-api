@@ -7,20 +7,17 @@
 .period-wrapper img {
   flex-shrink: 0;
   min-width: 100%;
-  min-height: 100
 }
 
 .period-title {
   position: relative;
-  // font-style: italic;
-  font-size: 7.6em;
+  font-size: 7.82em;
   color: $pastel-mint;
   display: inline-block;
   right: -100%;
   transform: translateX(-100%);
   transition: right 1s, transform 1s;
-    text-shadow: $text-shadow;
-
+  text-shadow: $text-shadow;
 }
 
 .period-wrapper:hover .period-title {

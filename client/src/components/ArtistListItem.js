@@ -45,4 +45,3 @@ const ArtistListItem = (props) => {
 }
 
 export default ArtistListItem;
-

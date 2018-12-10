@@ -22,9 +22,8 @@ class Painting extends React.Component {
           />
         </div>      
         <div className="painting-detail">
-          <h1 className="painting-detail-title">
-            {painting.painting_name} - {painting.artist.artist_name}
-          </h1>
+          <h1 className="painting-detail-artist">{painting.artist.artist_name}</h1>
+          <h1 className="painting-detail-title">{painting.painting_name}</h1>
           <h1 className="painting-detail-year">{painting.year}</h1>
         </div>
         <div className="painting-info">

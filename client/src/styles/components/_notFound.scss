@@ -1,0 +1,54 @@
+.not-found-bg {
+  position: fixed;
+  top: -40%;
+  left: -40%;
+  width: 150%;
+  height: 150%;
+  color: $navy-blue;
+  z-index: -1;
+  opacity: .5;
+}
+
+.not-found-bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  z-index: -1;
+}
+
+.lost-message {
+  position: absolute;
+  color: $pastel-mint;
+  top: 33%;
+  left: 2%;
+  width: 60%;
+}
+
+.lost-title {
+  font-size: 10em;
+  font-family: 'IM Fell English SC', serif;
+}
+
+.lost-body {
+  font-size: 2em;
+}
+
+#home-link {
+  font-family: 'IM Fell English SC', serif;
+  font-style: italic;
+  color: $light-pink;
+  text-decoration: none;
+}
+
+#home-link:hover h1 {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(2px);
+}
