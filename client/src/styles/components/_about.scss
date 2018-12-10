@@ -1,8 +1,36 @@
 .about-wrapper {
-  background: $off-white;
+  background: #EBE2DD;
   position: absolute;
   top: 10.5%;
   bottom: 0;
   right: 0;
   left: 0;
+  text-align: center;
+}
+
+.banner {
+  position: relative;
+}
+
+.about-wrapper p {
+  position: relative;
+  font-size: 1.8em;
+  margin-top: 1.5em;
+  margin-bottom: 3em;
+  width: 50%;
+  left: 23.5%;
+}
+
+.oscar-henry {
+  max-width: 20em;
+  max-height: 20em;
+  margin-bottom: 6em;
+}
+
+.contact {
+  font-size: 1.8em;
+}
+
+.contact a {
+  margin-right: 1em;
 }

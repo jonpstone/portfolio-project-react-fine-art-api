@@ -28,6 +28,7 @@ class Painting extends React.Component {
         </div>
         <div className="painting-info">
           <p className="painting-about">{painting.about}</p>
+          <p className="painting-about-1">{painting.about}</p>
         </div>
       </div>
     );

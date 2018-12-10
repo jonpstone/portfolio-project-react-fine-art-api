@@ -12,7 +12,7 @@ const NotFound = () => (
       <h1 className="lost-title">Four. Oh. Four...</h1>
       <p className="lost-body">
         I say, you there. Yes, you! You appear to have lost your way. 
-        Being a noble individual, as you appear, 
+        Being a noble individual, as you appear to be, 
         I feel it is my duty, as a gentleman of similiar condition,
         to escort you whence you came.
       </p>
