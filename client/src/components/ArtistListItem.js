@@ -10,7 +10,6 @@ const ArtistListItem = (props) => {
     dots: true,
     infinite: true,
     centerMode: true,
-    slidesToScroll: 4,
     variableWidth: true,
   };
   

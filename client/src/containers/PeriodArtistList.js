@@ -19,20 +19,50 @@ class PeriodArtistList extends React.Component {
       case "impressionism":
         return(
           <h1 style={{
-            fontSize: "12em",
+            fontSize: "10em",
             fontFamily: "'Forum', cursive",
-            marginTop: "16%",
-            left: "10%"
+            marginTop: "19%",
+            left: "-15%"
           }}>{periodName}
           </h1>
         );
       case "neoclassical":
         return(
           <h1 style={{
-            fontSize: "17em",
-            fontFamily: "'IM Fell English SC', serif",
-            marginTop: "16%",
-            left: "-14.5%"
+            fontSize: "8.5em",
+            fontFamily: "'Playfair Display SC', serif",
+            marginTop: "19.5%",
+            left: "-15.3%"
+          }}>{periodName}
+          </h1>
+        );
+      case "realism":
+        return(
+          <h1 style={{
+            fontSize: "22em",
+            fontFamily: "'Pinyon Script', cursive",
+            marginTop: "14.5%",
+            left: "-13.2%"
+          }}>{periodName}
+          </h1>
+        );
+      case "renaissance":
+        return(
+          <h1 style={{
+            fontSize: "9em",
+            fontFamily: "'Metamorphous', cursive",
+            marginTop: "19.3%",
+            left: "-15.5%"
+          }}>{periodName}
+          </h1>
+        );
+      case "romanticism":
+        return(
+          <h1 style={{
+            fontSize: "11.5em",
+            fontFamily: "'Old Standard TT', serif",
+            marginTop: "18.4%",
+            left: "-16%"
           }}>{periodName}
           </h1>
         );

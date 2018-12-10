@@ -1,0 +1,54 @@
+.painting-page-wrapper {
+  background: $off-white;
+  position: absolute;
+  top: 10.5%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.img-container {
+  margin-top: 1.1em;
+  border-right: 1px solid grey;
+  width: 67.61em;
+  height: 50em;
+}
+
+.img-container img {
+  // position: absolute;
+  // margin: 1.1%;
+  max-width: 64em;
+  max-height: 50em;
+  margin-top: 2.5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.painting-about {
+  position: absolute;
+  max-width: 66.5em;
+  top: 2.5%;
+  left: 55%;
+  right: 8%;
+  font-size: 1.5em;
+}
+
+.painting-detail {
+  position: absolute;
+  left: 1.25%;
+  font-style: italic;
+  bottom: 3%;
+}
+
+.painting-detail-year {
+  font-size: 11em;
+  position: absolute;
+  bottom: -37%;
+  left: 68%;
+  opacity: .1;
+}
+
+.painting-detail-title {
+  bottom: 15%;
+}

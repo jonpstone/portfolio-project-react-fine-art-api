@@ -11,21 +11,24 @@ class Painting extends React.Component {
 
   render() {
     const painting = this.props.painting
-    const styles = {maxHeight: "1000px", maxWidth: "1000px"};
 
     return(
-      <div className="landingPageWrapper">
-        <img
-          className="paintingImage"
-          src={`/${painting.image}`}
-          alt="Random Selection"
-          style={styles}
-        />
-        <div className="paintingInfo">
-          <h2 className="paintingDetail">
-            {painting.painting_name} by {painting.artist.artist_name} {painting.year}
-          </h2>
-          <p className="paintingAbout">{painting.about}</p>
+      <div className="painting-page-wrapper">
+        <div className="img-container">
+          <img
+            className="painting-image"
+            src={`/${painting.image}`}
+            alt="Random Selection"
+          />
+        </div>      
+        <div className="painting-detail">
+          <h1 className="painting-detail-title">
+            {painting.painting_name} - {painting.artist.artist_name}
+          </h1>
+          <h1 className="painting-detail-year">{painting.year}</h1>
+        </div>
+        <div className="painting-info">
+          <p className="painting-about">{painting.about}</p>
         </div>
       </div>
     );
