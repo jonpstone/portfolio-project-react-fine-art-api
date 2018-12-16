@@ -15,9 +15,8 @@ class PeriodList extends React.Component {
       <div className="list-wrapper">
       {
         this.props.periods.map((period) => (
-          <div>
+          <div key={period.id}>
             <Period
-              key={period.id}
               periodId={period.id}
               periodName={period.period_name}
               image={`/${this.randomImagePicker(period.paintings)}`}

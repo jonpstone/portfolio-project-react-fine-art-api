@@ -8,8 +8,8 @@ const About = () => (
       alt=""
     />
     <p>   
-      Two brothers, one human (Henry), one furry (Oscar), both culture vultures, 
-      (much like Stewie and Brian) decided that one day they wished
+      Two brothers, one human (Henry), one furry (Oscar), both culture vultures 
+      (much like Stewie and Brian), decided that one day they wished
       to share their love of fine art with the world through an online gallery.
       This gallery is the realization of all their plans and hard work.
       We hope you enjoy your stay and please contact us below for suggested 

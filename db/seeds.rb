@@ -4230,3 +4230,26 @@ Painting.create!([
     period_id: '6'
   },
 ])
+
+Comment.create!([
+  {
+    user_name: 'Bart',
+    comment: 'What a lovely painting!',
+    painting_id: 14
+  },
+  {
+    user_name: 'Marge',
+    comment: 'You have to love Canaletto... and the period as a whole!',
+    painting_id: 14
+  },
+  {
+    user_name: 'Homer',
+    comment: 'I like castles.',
+    painting_id: 14
+  },
+  {
+    user_name: 'Lisa',
+    comment: 'Could look at this all day.',
+    painting_id: 14
+  },
+])

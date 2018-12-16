@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def create
     @painting = Painting.find(params[:id])
     @comment = @painting.comments.create(params[:comment].permit(
-      :name, :comment
+      :user_name, :comment
     ))
     render json: @comment
   end
