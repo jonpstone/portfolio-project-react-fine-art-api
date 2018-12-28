@@ -31,10 +31,8 @@ class Painting extends React.Component {
         <div className="painting-info">
           <p className="painting-about">{painting.about}</p>
           <p className="painting-about-1">{painting.about}</p>
-          <CommentForm id={this.props.match.params.id}/>
-          <CommentsList 
-            comments={painting.comments}
-          />
+          <CommentForm id={this.props.match.params.id} />
+          <CommentsList comments={painting.comments} />
         </div>
       </div>
     );

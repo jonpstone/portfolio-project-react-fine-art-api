@@ -1,12 +1,12 @@
 import React from 'react';
 
-const CommentBox = (props) => (
+const Comment = (props) => (
   <div className="comment-box">
     <h4>{props.user_name}</h4>
     <p>
-      {props.comment}
+      {props.content}
     </p>
   </div>
 );
 
-export default CommentBox;
+export default Comment;

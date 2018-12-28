@@ -9,6 +9,10 @@ Rails.application.routes.draw do
       resources :artists
     end
 
+    resources :paintings do
+      resources :comments
+    end
+
     get '/random', to: "paintings#random"
   end
 end
