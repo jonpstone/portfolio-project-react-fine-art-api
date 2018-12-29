@@ -8,7 +8,7 @@ class CommentForm extends React.Component {
     this.handleOnSubmit= this.handleOnSubmit.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
     this.state = {
-      user: '',
+      user_name: '',
       content: ''
     }
   }
@@ -21,11 +21,8 @@ class CommentForm extends React.Component {
 
   handleOnSubmit = event => {
     event.preventDefault()
-    this.props.createComment(this.state.user, this.state.content, this.props.id);
-    this.setState({ 
-      user: '', 
-      content: ''
-    });
+    this.props.createComment(this.state.user, this.state.content, this.props.paintingId);
+    document.getElementById("comment-form").reset();
   }
 
   render() {
@@ -33,6 +30,7 @@ class CommentForm extends React.Component {
       <div>
         <h1>Add Comment</h1>
         <form 
+          id="comment-form"
           onSubmit={this.handleOnSubmit}
         >
           <input
