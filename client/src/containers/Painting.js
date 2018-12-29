@@ -48,11 +48,11 @@ class Painting extends React.Component {
         </div>
 
         <div 
-          className="comments" 
+          id="comments" 
           onClick={this.toggleHidden.bind(this)}>
           <img
             id="comment-icon"
-            src="/images/comments.png"
+            src="/images/comments-128.png"
             alt="comment-bubble"
           />
           <h1 id="comment-count">{painting.comments.length}</h1>
@@ -68,7 +68,7 @@ class Painting extends React.Component {
           }
       </div>
     );
-  }
+  } 
 }
 
 const mapStateToProps = (state) => {

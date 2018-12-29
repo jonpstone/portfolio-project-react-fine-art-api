@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createComment } from '../actions/paintingActions'
+import { createComment } from '../actions/paintingActions';
+import { FormControl } from 'react-bootstrap';
 
 class CommentForm extends React.Component {
   constructor(props) {
@@ -27,27 +28,28 @@ class CommentForm extends React.Component {
 
   render() {
     return(
-      <div>
-        <h1>Add Comment</h1>
+      <div className="comment-form-area">
+        <h2>Add Comment</h2>
         <form 
           id="comment-form"
           onSubmit={this.handleOnSubmit}
         >
-          <input
+          <FormControl
             required
             name="user" 
             type="text" 
             placeholder="Your Name"
             onChange={this.handleOnChange}
-          />
-          <textarea 
+          /><br />
+          <FormControl
+            componentClass="textarea"
             required
             name="content"
             rows="5" 
             cols="28" 
             placeholder="Enter Comment"
             onChange={this.handleOnChange}
-          />
+          /><br />
           <button type="submit">Submit</button>
         </form>
       </div>

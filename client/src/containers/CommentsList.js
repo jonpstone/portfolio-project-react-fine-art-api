@@ -4,14 +4,28 @@ import { connect } from 'react-redux';
 
 class CommentsList extends React.Component {
 
+  dateSubmitted(value){
+    const date = new Date(value);
+    const arrDate = date.toString().split(' ');
+    const commentDate = `on ${arrDate[1]} ${arrDate[2]}, ${arrDate[3]} at ${arrDate[4]}`
+    return commentDate;
+  }
+
   render() {
-    const showComments = this.props.comments.map((comment) =>
-      <Comment key={comment.id} {...comment}/>
+    const reversedComments = this.props.comments.reverse();
+    const showComments = reversedComments.map((comment) =>
+      <Comment 
+        key={comment.id}
+        user={comment.user_name}
+        content={comment.content}
+        date={this.dateSubmitted(comment.created_at)}
+      />
     );
     
     return(
-      <div>
-        <h1>Comments</h1>
+      <div className="comment-list">
+      <br/>
+        <h2>Latest Comments</h2>
         {showComments}
       </div>
     )

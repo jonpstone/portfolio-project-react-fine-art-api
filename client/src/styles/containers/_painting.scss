@@ -70,30 +70,35 @@
   top: 20%;
 }
 
-#comments{
-  position: absolute;
-  right: 27%;
-  bottom: 9%;
-  color: grey; 
-}
-
 #comment-icon {
-  float: left;
+  position: absolute;
+  right: 24%;
+  bottom: 3%;
 }
 
 #comment-count {
   position: absolute;
-  float: left;
-  top: -70%;
-  right: -120%;
+  bottom: 7%;
+  right: 26.1%;
+  color: #696A68;
   font-style: italic;
-  font-size: 3.5em;
+  font-size: 4.5em;
 }
 
-#comments:hover {
+#comments:hover img,
+#comments:hover h1 {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(2px);
+}
+
+.comments-area{
+  position: absolute;
+  right: 8%;
+  top: .5%;
+  background: $off-white;
+  width: 52em;
+  padding-left: 5em;
 }
