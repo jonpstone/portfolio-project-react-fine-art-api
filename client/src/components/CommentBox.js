@@ -4,7 +4,7 @@ import CommentsList from '../containers/CommentsList';
 
 const CommentBox = (props) => (
   <div className="comment-box">
-    <CommentForm paintingId={props.id}/>
+    <CommentForm paintingId={props.id}/><br />
     <CommentsList list={props.comments}/>
   </div>
 );

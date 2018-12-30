@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createComment } from '../actions/paintingActions';
-import { FormControl } from 'react-bootstrap';
+import { FormControl, Button } from 'react-bootstrap';
 
 class CommentForm extends React.Component {
   constructor(props) {
@@ -50,7 +50,7 @@ class CommentForm extends React.Component {
             placeholder="Enter Comment"
             onChange={this.handleOnChange}
           /><br />
-          <button type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
         </form>
       </div>
     )

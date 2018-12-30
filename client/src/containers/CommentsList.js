@@ -7,13 +7,24 @@ class CommentsList extends React.Component {
   dateSubmitted(value){
     const date = new Date(value);
     const arrDate = date.toString().split(' ');
-    const commentDate = `on ${arrDate[1]} ${arrDate[2]}, ${arrDate[3]} at ${arrDate[4]}`
+    const commentTime = arrDate[4].split(':');
+    const commentDate = `at ${commentTime[0]}:${commentTime[1]} on ${arrDate[1]} ${arrDate[2]}, ${arrDate[3]}`
     return commentDate;
   }
 
+  sortByDate(a, b) {
+    if (a.created_at < b.created_at) {
+      return 1;
+    }
+    if (a.created_at > b.created_at) {
+      return -1;
+    }
+    return 0;
+  }
+
   render() {
-    const reversedComments = this.props.comments.reverse();
-    const showComments = reversedComments.map((comment) =>
+    const sortedComments = this.props.comments.sort(this.sortByDate);
+    const showComments = sortedComments.map((comment) =>
       <Comment 
         key={comment.id}
         user={comment.user_name}
@@ -25,7 +36,6 @@ class CommentsList extends React.Component {
     return(
       <div className="comment-list">
       <br/>
-        <h2>Latest Comments</h2>
         {showComments}
       </div>
     )
