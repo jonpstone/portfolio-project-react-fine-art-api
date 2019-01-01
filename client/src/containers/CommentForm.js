@@ -29,7 +29,7 @@ class CommentForm extends React.Component {
   render() {
     return(
       <div className="comment-form-area">
-        <h2>Add Comment</h2>
+        <h2>Guestbook</h2>
         <form 
           id="comment-form"
           onSubmit={this.handleOnSubmit}
@@ -47,7 +47,7 @@ class CommentForm extends React.Component {
             name="content"
             rows="5" 
             cols="28" 
-            placeholder="Enter Comment"
+            placeholder="Remarks"
             onChange={this.handleOnChange}
           /><br />
           <Button type="submit">Submit</Button>

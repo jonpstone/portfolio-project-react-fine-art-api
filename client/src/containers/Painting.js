@@ -4,8 +4,8 @@ import CommentBox from '../components/CommentBox';
 import { fetchSelectedPainting } from '../actions/paintingActions';
 
 class Painting extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       isHidden: true
     }
@@ -47,9 +47,7 @@ class Painting extends React.Component {
           <p className="painting-about-1">{painting.about}</p>
         </div>
 
-        <div 
-          id="comments" 
-          onClick={this.toggleHidden.bind(this)}>
+        <div id="comments" onClick={this.toggleHidden.bind(this)}>
           <img
             id="comment-icon"
             src="/images/comments-128.png"
