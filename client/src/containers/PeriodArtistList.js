@@ -4,7 +4,7 @@ import ArtistListItem from '../components/ArtistListItem';
 
 class PeriodArtistList extends React.Component {
 
-  periodTitlePositioner = (periodName) => {
+  periodTitlePositioner(periodName) {
     switch (periodName) {
       case "baroque":
         return(

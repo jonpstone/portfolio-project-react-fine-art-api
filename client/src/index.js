@@ -27,7 +27,7 @@ ReactDOM.render(
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.register();
 
-// Hot reloading in create-react-app to persist redux state.
+// Hot reloading in create-react-app to persist store.
 // Useful during development
 if (module.hot) {
   module.hot.accept('./App', () => {

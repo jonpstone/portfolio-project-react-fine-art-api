@@ -4,7 +4,7 @@ import Period from '../components/Period';
 
 class PeriodList extends React.Component {
 
-  randomImagePicker = (paintings) => {
+  randomImagePicker(paintings) {
     const paintingId = Math.floor(Math.random() * (paintings.length - 1));
     const paintingUrl = paintings[paintingId].image;
     return paintingUrl;

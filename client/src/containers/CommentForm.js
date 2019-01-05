@@ -14,13 +14,13 @@ class CommentForm extends React.Component {
     }
   }
 
-  handleOnChange = event => {
+  handleOnChange(event)  {
     this.setState({
       [event.target.name]: event.target.value
     });
   }
 
-  handleOnSubmit = event => {
+  handleOnSubmit(event) {
     event.preventDefault()
     this.props.createComment(this.state.user, this.state.content, this.props.paintingId);
     document.getElementById("comment-form").reset();
