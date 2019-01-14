@@ -23,7 +23,7 @@ class Painting extends React.Component {
   }
 
   render() {
-    const painting = this.props.painting
+    const painting = this.props.painting;
 
     return(
       <div className="painting-page-wrapper">
