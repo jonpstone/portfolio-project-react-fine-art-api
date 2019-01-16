@@ -13,7 +13,7 @@ export const addComment = (comment, paintingId) => {
   };
 };
 
-export const fetchSelectedPainting = (id) => {
+export const fetchSelectedPainting = id => {
   return dispatch => {
     return fetch(`/api/paintings/${id}`)
       .then(res => res.json())
