@@ -31,7 +31,7 @@ class Home extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return ({
     painting: state.painting
   })

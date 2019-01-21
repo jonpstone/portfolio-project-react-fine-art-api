@@ -23,13 +23,15 @@ class CommentsList extends React.Component {
   }
 
   render() {
-    const sortedComments = this.props.comments.sort(this.sortByDate);
+    const sortedComments = [...this.props.comments].sort(this.sortByDate);
     const showComments = sortedComments.map((comment) =>
       <Comment 
         key={comment.id}
+        id={comment.id}
         user={comment.user_name}
         content={comment.content}
         date={this.dateSubmitted(comment.created_at)}
+        upVote={comment.upvote}
       />
     );
     
@@ -42,7 +44,7 @@ class CommentsList extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return ({
     comments: state.painting.comments
   })

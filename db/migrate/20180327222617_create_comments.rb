@@ -3,6 +3,7 @@ class CreateComments < ActiveRecord::Migration[5.1]
     create_table :comments do |t|
       t.string :user_name
       t.string :content
+      t.integer :upvote, :default => 0
       t.references :painting, foreign_key: true
 
       t.timestamps

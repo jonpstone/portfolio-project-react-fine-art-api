@@ -13,6 +13,12 @@ class CommentsController < ApplicationController
     render json: @comments
   end
 
+  def update
+    @comment = Comment.find(id: params[:id])
+    @comment.increment!(:upvote)
+    # render json: @comment
+  end
+
   private
 
     def set_painting

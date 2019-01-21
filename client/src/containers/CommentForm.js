@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createComment } from '../actions/paintingActions';
+import { createComment } from '../actions/commentActions';
 import { FormControl, Button } from 'react-bootstrap';
 
 class CommentForm extends React.Component {
