@@ -15,8 +15,8 @@ class CommentsController < ApplicationController
 
   def update
     @comment = Comment.find(id: params[:id])
-    @comment.increment!(:upvote)
-    # render json: @comment
+    @comment.update(params.require(:comment).permit(:upvote))
+    render json: @comment
   end
 
   private

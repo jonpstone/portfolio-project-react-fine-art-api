@@ -4,7 +4,7 @@ export default function commentsReducer(
   }, action) {
   switch ( action.type ) {
     case 'SET_COMMENT_COUNT_SUCCESS':
-      return {...state, upvote: action.count};
+      return {...state, upvote: action.count + 1};
     default:
       return state;
   }

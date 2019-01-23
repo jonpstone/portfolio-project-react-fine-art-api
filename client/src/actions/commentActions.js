@@ -17,7 +17,7 @@ export const setCommentCount = (count, commentId) => {
 export const upVote = (count, commentId) => {
   return dispatch => {
     console.log('commentId =', commentId.comment);
-    return fetch(`api/comments/${commentId.comment}`, {
+    return fetch(`api/comments/${commentId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

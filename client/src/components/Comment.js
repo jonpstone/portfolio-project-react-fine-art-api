@@ -1,5 +1,5 @@
 import React from 'react';
-import UpVoteCounter from '../containers/Counter.js'
+import UpVoteCounter from '../containers/Counter.js';
 
 const Comment = (props) => (
   <div className="comment">
@@ -11,6 +11,7 @@ const Comment = (props) => (
         comment={props.id}
         counter={props.upVote}
       />
+      {console.log('PROPS', props.upVote)}
   </div>
 );
 
