@@ -10,6 +10,8 @@ export default function paintingReducer(
       return action.painting;
     case 'CREATE_COMMENT_SUCCESS':
       return {...state, comments: state.comments.concat(action.comment)};
+    case 'SET_COMMENT_COUNT_SUCCESS':
+      return {...state, upvote: action.count + 1};
     default:
       return state;
   }

@@ -14,7 +14,7 @@ export const setCommentCount = (count, commentId) => {
   };
 };
 
-export const upVote = (count, commentId) => {
+export const upVoteSetter = (count, commentId) => {
   return dispatch => {
     console.log('commentId =', commentId.comment);
     return fetch(`api/comments/${commentId}`, {

@@ -21,7 +21,7 @@ class CommentForm extends React.Component {
   }
 
   handleOnSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
     this.props.createComment(this.state.user, this.state.content, this.props.paintingId);
     document.getElementById("comment-form").reset();
   }
@@ -53,7 +53,7 @@ class CommentForm extends React.Component {
           <Button type="submit">Submit</Button>
         </form>
       </div>
-    )
+    );
   }
 }
 

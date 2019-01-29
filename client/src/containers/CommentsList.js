@@ -1,5 +1,5 @@
 import React from 'react';
-import Comment from '../components/Comment';
+import Comment from '../containers/Comment';
 import { connect } from 'react-redux';
 
 class CommentsList extends React.Component {
@@ -10,7 +10,7 @@ class CommentsList extends React.Component {
     const commentTime = arrDate[4].split(':');
     const commentDate = `at ${commentTime[0]}:${commentTime[1]} on ${arrDate[1]} ${arrDate[2]}, ${arrDate[3]}`
     return commentDate;
-  }
+  };
 
   sortByDate(a, b) {
     if (a.created_at < b.created_at) {
@@ -20,7 +20,7 @@ class CommentsList extends React.Component {
       return -1;
     }
     return 0;
-  }
+  };
 
   render() {
     const sortedComments = [...this.props.comments].sort(this.sortByDate);
@@ -32,6 +32,8 @@ class CommentsList extends React.Component {
         content={comment.content}
         date={this.dateSubmitted(comment.created_at)}
         upVote={comment.upvote}
+        paintingId={comment.painting_id}
+        comment={comment}
       />
     );
     
@@ -40,14 +42,14 @@ class CommentsList extends React.Component {
       <br/>
         {showComments}
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = state => {
   return ({
     comments: state.painting.comments
-  })
+  });
 }
 
 export default connect(mapStateToProps)(CommentsList);
