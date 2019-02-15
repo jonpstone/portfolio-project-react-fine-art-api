@@ -14,24 +14,25 @@ export const setCommentCount = (count, commentId) => {
   };
 };
 
-export const upVoteSetter = (count, commentId) => {
+export const upVoteSetter = (newCount) => {
+  debugger // DEBUGGER HERE
   return dispatch => {
-    console.log('commentId =', commentId.comment);
-    return fetch(`api/comments/${commentId}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          upvote: count,
-          id: commentId
-        }),
-      })
-      .then(response => response.json())
-      .then(count => {
-        dispatch(setCommentCount(count, commentId))
-      })
-      .catch(error => console.log(error))
+    return fetch(`/api/comments/${newCount.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        upvote: newCount
+      }),
+    })
+    .then(response => response.json())
+    .then(comment => {
+      console.log('COMMENT', comment);
+      debugger // DEBUGGER HERE
+      dispatch(setCommentCount(comment));
+    })
+    .catch(error => console.log(error))
   };
 };
 

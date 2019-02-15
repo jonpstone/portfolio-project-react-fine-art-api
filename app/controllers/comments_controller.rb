@@ -14,8 +14,8 @@ class CommentsController < ApplicationController
   end
 
   def update
-    @comment = Comment.find(id: params[:id])
-    @comment.update(params.permit(:comment).permit(:upvote))
+    @comment = Comment.find_by(id: params[:id])
+    @comment.update(comments_params)
     render json: @comment
   end
 
@@ -26,6 +26,6 @@ class CommentsController < ApplicationController
     end
 
     def comments_params
-      params.permit(:user_name, :content)
+      params.permit(:user_name, :content, :upvote)
     end
 end
