@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 class Comment extends React.Component {
 
   shouldComponentUpdate(nextProps, nextState) {
+
     return nextProps.comment.upvote !== this.props.comment.upvote;
   }
 
@@ -22,7 +23,7 @@ class Comment extends React.Component {
         <p>
           {this.props.content} 
         </p>
-        <Button onClick={this.upVoteCounter}>Like {this.props.upvote}</Button>
+        <Button onClick={this.upVoteCounter}>Like {this.props.upVote}</Button>
       </div>
     );
   }

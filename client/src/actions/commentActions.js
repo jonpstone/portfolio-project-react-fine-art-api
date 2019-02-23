@@ -6,16 +6,14 @@ export const addComment = (comment, paintingId) => {
   };
 };
 
-export const setCommentCount = (count, commentId) => {
+export const setCommentCount = (count) => {
   return {
     type: 'SET_COMMENT_COUNT_SUCCESS',
-    count,
-    commentId
+    count
   };
 };
 
 export const upVoteSetter = (newCount) => {
-  debugger // DEBUGGER HERE
   return dispatch => {
     return fetch(`/api/comments/${newCount.id}`, {
       method: 'PUT',
@@ -23,13 +21,11 @@ export const upVoteSetter = (newCount) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        upvote: newCount
+        upvote: newCount.upvote
       }),
     })
     .then(response => response.json())
     .then(comment => {
-      console.log('COMMENT', comment);
-      debugger // DEBUGGER HERE
       dispatch(setCommentCount(comment));
     })
     .catch(error => console.log(error))

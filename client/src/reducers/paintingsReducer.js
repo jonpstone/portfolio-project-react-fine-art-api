@@ -11,13 +11,18 @@ export default function paintingReducer(
     case 'CREATE_COMMENT_SUCCESS':
       return {...state, comments: state.comments.concat(action.comment)};
     case 'SET_COMMENT_COUNT_SUCCESS':
-      const index = state.findIndex(answer => answer.id === action.answer.id);
-      const updatedAnswer = [
-        ...state.slice(0, index),
-        action.answer,
-        ...state.slice(index + 1)
-      ];
-      return updatedAnswer
+      return {
+        ...state,
+        comments: state.comments.map(comment => {
+          if (comment.id === action.count.id) {
+            return {
+              ...comment,
+              upvote: action.count.upvote
+            };
+          }
+          return comment;
+        })
+      };
     default:
       return state;
   }
