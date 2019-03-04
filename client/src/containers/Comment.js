@@ -3,12 +3,11 @@ import { upVoteSetter } from '../actions/commentActions';
 import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
-class Comment extends React.Component {
+class Comment extends React.PureComponent {
 
-  shouldComponentUpdate(nextProps, nextState) {
-
-    return nextProps.comment.upvote !== this.props.comment.upvote;
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return nextProps.comment.upvote !== this.props.comment.upvote;
+  // }
 
   upVoteCounter = () => {
     const { upVoteSetter, comment } = this.props;
