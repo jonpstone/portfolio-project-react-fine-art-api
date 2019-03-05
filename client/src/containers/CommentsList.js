@@ -1,30 +1,46 @@
 import React from 'react';
 import Comment from '../containers/Comment';
+import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 class CommentsList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: []
+    }
+  }
 
   dateSubmitted(value){
     const date = new Date(value);
     const arrDate = date.toString().split(' ');
     const commentTime = arrDate[4].split(':');
-    const commentDate = `at ${commentTime[0]}:${commentTime[1]} on ${arrDate[1]} ${arrDate[2]}, ${arrDate[3]}`
+    const commentDate = `at ${commentTime[0]}:${commentTime[1]} on 
+                        ${arrDate[1]} ${arrDate[2]}, ${arrDate[3]}`
     return commentDate;
   };
 
+  mostPopular(commentsToBeSorted){
+    const sortedComments = commentsToBeSorted.sort(this.sortByLikes);
+    console.log(sortedComments);
+    this.setState({ comments: sortedComments })
+  }
+
+  sortByLikes(a, b) {
+    return (
+      (a.upvote < b.upvote) ? 1 : ((a.upvote > b.upvote) ? -1 : 0)
+    );
+  }
+
   sortByDate(a, b) {
-    if (a.created_at < b.created_at) {
-      return 1;
-    }
-    if (a.created_at > b.created_at) {
-      return -1;
-    }
-    return 0;
+    return (
+      (a.created_at < b.created_at) ? 1 : ((a.created_at > b.created_at) ? -1 : 0)
+    );
   };
 
   render() {
-    const sortedComments = [...this.props.comments].sort(this.sortByDate);
-    const showComments = sortedComments.map((comment) =>
+    let sortedComments = [...this.props.comments].sort(this.sortByDate);
+    let showComments = sortedComments.map((comment) =>
       <Comment 
         key={comment.id}
         id={comment.id}
@@ -39,6 +55,9 @@ class CommentsList extends React.Component {
     
     return(
       <div className="comment-list">
+      <Button type="submit" onClick={() => this.mostPopular(sortedComments)}> 
+      
+      Most Popular </Button>
       <br/>
         {showComments}
       </div>
