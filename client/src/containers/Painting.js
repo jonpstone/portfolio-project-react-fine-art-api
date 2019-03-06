@@ -57,12 +57,12 @@ class Painting extends React.Component {
         </div>
           {
             !this.state.isHidden && 
-            <div className="comments-area">
-              <CommentBox 
-                id={this.props.match.params.id} 
-                comments={painting.comments}
-              />
-            </div>
+              <div className="comments-area">
+                <CommentBox 
+                  id={this.props.match.params.id} 
+                  comments={painting.comments}
+                />
+              </div>
           }
       </div>
     );

@@ -4,12 +4,6 @@ import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 class CommentsList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      comments: []
-    }
-  }
 
   dateSubmitted(value){
     const date = new Date(value);
@@ -20,27 +14,25 @@ class CommentsList extends React.Component {
     return commentDate;
   };
 
-  mostPopular(commentsToBeSorted){
-    const sortedComments = commentsToBeSorted.sort(this.sortByLikes);
-    console.log(sortedComments);
-    this.setState({ comments: sortedComments })
+  sortByLikes(toBeSortedByLikes){
+    const sortedByLikes = toBeSortedByLikes.sort(
+      (a, b) => (b.upvote - a.upvote)
+    );
+    console.log('LIKES', sortedByLikes);
+    return this.sortedComments(sortedByLikes);
   }
 
-  sortByLikes(a, b) {
-    return (
-      (a.upvote < b.upvote) ? 1 : ((a.upvote > b.upvote) ? -1 : 0)
-    );
-  }
-
-  sortByDate(a, b) {
-    return (
-      (a.created_at < b.created_at) ? 1 : ((a.created_at > b.created_at) ? -1 : 0)
-    );
+  sortByDate(toBeSortedByDate) {
+    const sortedByDate = toBeSortedByDate.sort(
+      (a, b) => (a.created_at - b.created_at)
+    ).reverse();
+    console.log('DATE', sortedByDate);
+    return this.sortedComments(sortedByDate);
   };
 
-  render() {
-    let sortedComments = [...this.props.comments].sort(this.sortByDate);
-    let showComments = sortedComments.map((comment) =>
+  sortedComments(comments){
+    // debugger
+    const newArray = comments.map((comment) =>
       <Comment 
         key={comment.id}
         id={comment.id}
@@ -52,14 +44,22 @@ class CommentsList extends React.Component {
         comment={comment}
       />
     );
-    
+    return newArray;
+  }
+
+  render() {
+    let commentsList = this.sortedComments([...this.props.comments]);
+
     return(
       <div className="comment-list">
-      <Button type="submit" onClick={() => this.mostPopular(sortedComments)}> 
-      
-      Most Popular </Button>
+      <Button type="submit" onClick={() => this.sortByLikes([...this.props.comments])}>
+        Most Popular
+      </Button>
+      <Button type="submit" onClick={() => this.sortByDate([...this.props.comments])}>
+        Most Recent
+      </Button>
       <br/>
-        {showComments}
+        {commentsList}
       </div>
     );
   }
