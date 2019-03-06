@@ -11,10 +11,13 @@
   font-style: italic;
 }
 
+#most-popular {
+  margin-right: .7em;
+}
+
 /* Box styles */
 .comment-list {
   border: none;
-  padding: 5px;
   width: 36.1em;
   height: 23.2em;
   overflow: scroll;

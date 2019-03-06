@@ -4,62 +4,56 @@ import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 class CommentsList extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { showComments: this.initialDateOrder([...props.comments]) };
+    this.sortByLikes = this.sortByLikes.bind(this);
+  }
 
   dateSubmitted(value){
-    const date = new Date(value);
-    const arrDate = date.toString().split(' ');
-    const commentTime = arrDate[4].split(':');
-    const commentDate = `at ${commentTime[0]}:${commentTime[1]} on 
-                        ${arrDate[1]} ${arrDate[2]}, ${arrDate[3]}`
+    const date = new Date(value).toString().split(' ');
+    const commentTime = date[4].split(':');
+    const commentDate = `
+      at ${commentTime[0]}:${commentTime[1]} 
+      on ${date[1]} ${date[2]}, ${date[3]}`
     return commentDate;
   };
 
-  sortByLikes(toBeSortedByLikes){
-    const sortedByLikes = toBeSortedByLikes.sort(
-      (a, b) => (b.upvote - a.upvote)
-    );
-    console.log('LIKES', sortedByLikes);
-    return this.sortedComments(sortedByLikes);
+  sortByLikes() {
+    this.setState({
+      showComments: this.state.showComments.sort(
+        (a, b) => a.upvote - b.upvote).reverse()
+    })
   }
 
-  sortByDate(toBeSortedByDate) {
+  initialDateOrder(toBeSortedByDate) {
     const sortedByDate = toBeSortedByDate.sort(
       (a, b) => (a.created_at - b.created_at)
     ).reverse();
-    console.log('DATE', sortedByDate);
-    return this.sortedComments(sortedByDate);
+    return sortedByDate;
   };
 
-  sortedComments(comments){
-    // debugger
-    const newArray = comments.map((comment) =>
-      <Comment 
-        key={comment.id}
-        id={comment.id}
-        user={comment.user_name}
-        content={comment.content}
-        date={this.dateSubmitted(comment.created_at)}
-        upVote={comment.upvote}
-        paintingId={comment.painting_id}
-        comment={comment}
-      />
-    );
-    return newArray;
-  }
-
   render() {
-    let commentsList = this.sortedComments([...this.props.comments]);
-
     return(
       <div className="comment-list">
-      <Button type="submit" onClick={() => this.sortByLikes([...this.props.comments])}>
-        Most Popular
-      </Button>
-      <Button type="submit" onClick={() => this.sortByDate([...this.props.comments])}>
-        Most Recent
-      </Button>
-      <br/>
-        {commentsList}
+        <Button id="most-popular" onClick={this.sortByLikes}>
+          Most Popular?
+        </Button>
+        <br/>
+        {
+          this.state.showComments.map((comment) =>
+            <Comment 
+              key={comment.id}
+              id={comment.id}
+              user={comment.user_name}
+              content={comment.content}
+              date={this.dateSubmitted(comment.created_at)}
+              upVote={comment.upvote}
+              paintingId={comment.painting_id}
+              comment={comment}
+            />
+          )
+        }
       </div>
     );
   }
