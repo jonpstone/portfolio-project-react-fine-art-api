@@ -29,10 +29,6 @@ class PeriodList extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return ({
-    periods: state.periods
-  })
-}
+const mapStateToProps = state => ({ periods: state.periods });
 
 export default connect(mapStateToProps)(PeriodList);

@@ -69,10 +69,7 @@ class Painting extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return ({
-    painting: state.painting
-  })
-}
+const mapStateToProps = state => ({ painting: state.painting });
+
 
 export default connect(mapStateToProps, {fetchSelectedPainting})(Painting);

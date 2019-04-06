@@ -1,10 +1,4 @@
-export default function paintingReducer(
-  state = {
-    painting_name: "",
-    image: "",
-    year: null,
-    comments: [],
-  }, action) {
+export default function paintingReducer(state = {}, action) {
   switch ( action.type ) {
 
     case 'GET_PAINTING_SUCCESS':
