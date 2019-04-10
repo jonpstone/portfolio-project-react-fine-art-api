@@ -2,7 +2,7 @@
 
 ## DESCRIPTION
 
-A React webapp that consumes from a Ruby on Rails API endpoint. It's an online art gallery where anyone is free to browse and leave comments. Only the comments can be altered by user interaction, all other data is hard coding and fetched via lifecycle methods within the React Components.
+A React webapp that consumes from a Ruby on Rails API endpoint. It's an online art gallery where anyone is free to browse and leave comments. Only the comments can be altered by user interaction, all other data is hard coded and fetched via lifecycle methods within the React Components.
 
 ## DOWNLOAD INSTALL
 
