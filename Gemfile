@@ -15,7 +15,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'active_model_serializers'
 gem 'foreman', '~> 0.82.0'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick'
 gem "actionview", ">= 5.1.6.2"
 
